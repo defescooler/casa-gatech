@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
     title: "Central Asian Student Association - Georgia Tech",
     description: "Official website of the Central Asian Student Association at Georgia Tech",
+    icons: {
+        icon: "/icon.png",
+        shortcut: "/icon.png",
+        apple: "/icon.png",
+    }
 }
 
 export default function RootLayout({
