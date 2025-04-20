@@ -189,7 +189,7 @@ export default function Home() {
                         Moments captured from our past events and cultural celebrations.
                     </p>
                     <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-                        {photoAlbum.map((item, index) => (
+                        {photoAlbum.slice(0, 4).map((item, index) => (
                             <div key={index} className="group relative aspect-square overflow-hidden rounded-lg">
                                 <img
                                     src={item.src}
@@ -201,7 +201,9 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="mt-6 text-center">
-                        <Button variant="outline">View All Photos</Button>
+                        <Link href="/gallery">
+                            <Button variant="outline">View All Photos</Button>
+                        </Link>
                     </div>
                 </section>
                 <section id="leadership" className="container py-12 md:py-16">
@@ -354,11 +356,11 @@ export default function Home() {
                             <div className="mt-6 flex flex-col gap-4">
                                 <div className="flex items-center justify-center gap-2">
                                     <Mail className="h-5 w-5 text-amber-600" />
-                                    <span>casa@gatech.edu</span>
+                                    <span>adoss35 [at] gatech [dot] edu</span>
                                 </div>
                                 <div className="flex items-center justify-center gap-2">
                                     <Users className="h-5 w-5 text-amber-600" />
-                                    <span>Weekly Meetings: Thursdays at 6 PM, Student Center Room 320</span>
+                                    <span>Weekly Meetings: TBD</span>
                                 </div>
                             </div>
                             <div className="mt-8 flex justify-center gap-4">
