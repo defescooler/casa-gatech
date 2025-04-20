@@ -9,7 +9,7 @@ export function getLastCommitDate(): string {
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
         });
     } catch (error) {
         console.error('Failed to get git commit date:', error);
