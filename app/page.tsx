@@ -121,27 +121,34 @@ export default function Home() {
                         </Link>
                     </div>
                     <nav className="hidden md:flex md:gap-6">
-                        <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
-                            About
-                        </Link>
-                        <Link href="#countries" className="text-sm font-medium transition-colors hover:text-primary">
-                            Countries
-                        </Link>
-                        <Link href="/events" className="text-sm font-medium transition-colors hover:text-primary">
-                            Events
-                        </Link>
-                        <Link href="#gallery" className="text-sm font-medium transition-colors hover:text-primary">
-                            Gallery
-                        </Link>
-                        <Link href="#leadership" className="text-sm font-medium transition-colors hover:text-primary">
-                            Leadership
-                        </Link>
-                        <Link href="/explore" className="text-sm font-medium transition-colors hover:text-primary">
-                            Explore
-                        </Link>
-                        <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
-                            Contact
-                        </Link>
+                        <div className="flex items-center gap-4">
+                            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary relative px-2 py-1">
+                                About
+                            </Link>
+                            <Link href="#countries" className="text-sm font-medium transition-colors hover:text-primary relative px-2 py-1">
+                                Countries
+                            </Link>
+                            <Link href="#gallery" className="text-sm font-medium transition-colors hover:text-primary relative px-2 py-1">
+                                Gallery
+                            </Link>
+                            <Link href="#leadership" className="text-sm font-medium transition-colors hover:text-primary relative px-2 py-1">
+                                Leadership
+                            </Link>
+                            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary relative px-2 py-1">
+                                Contact
+                            </Link>
+                        </div>
+
+                        <div className="h-6 border-l border-gray-200 mx-2"></div>
+
+                        <div className="flex items-center gap-4">
+                            <Link href="/events" className="text-sm font-medium px-3 py-1.5 rounded-md bg-amber-50 text-amber-800 hover:bg-amber-100 transition-colors">
+                                Events
+                            </Link>
+                            <Link href="/explore" className="text-sm font-medium px-3 py-1.5 rounded-md bg-amber-50 text-amber-800 hover:bg-amber-100 transition-colors">
+                                Explore
+                            </Link>
+                        </div>
                     </nav>
                     <div className="flex items-center gap-4">
                         <Link href="/join" className="hidden md:inline-flex">
