@@ -86,7 +86,7 @@ export default function ExplorePage() {
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold">Cuisine</h3>
                                 <p className="mt-2 text-sm text-muted-foreground">
-                                    Central Asian cuisine reflects the region's nomadic heritage and agricultural practices. Popular
+                                    Central Asian cuisine reflects the region&#39;s nomadic heritage and agricultural practices. Popular
                                     dishes include plov (rice pilaf), manti (dumplings), lagman (noodles), and various breads like
                                     non/lepeshka.
                                 </p>

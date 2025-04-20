@@ -5,17 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import dynamic from "next/dynamic"
 import type { LatLngTuple } from "leaflet"
-
-// Define types
-interface Country {
-    id: string
-    name: string
-    capital: string
-    population: string
-    languages: string
-    position: LatLngTuple
-    facts: string[]
-}
+import {countries} from "@/lib/data";
 
 // Dynamically import the map components to avoid SSR issues
 const MapWithNoSSR = dynamic(() => import("./map-component"), {
@@ -25,74 +15,6 @@ const MapWithNoSSR = dynamic(() => import("./map-component"), {
 
 export default function CulturalMap() {
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
-
-    const countries: Country[] = [
-        {
-            id: "kazakhstan",
-            name: "Kazakhstan",
-            capital: "Astana",
-            population: "19 million",
-            languages: "Kazakh, Russian",
-            position: [48.0196, 66.9237] as LatLngTuple,
-            facts: [
-                "Largest landlocked country in the world",
-                "Home to the Baikonur Cosmodrome, the world's first and largest space launch facility",
-                "Traditional nomadic heritage with rich equestrian culture",
-            ],
-        },
-        {
-            id: "uzbekistan",
-            name: "Uzbekistan",
-            capital: "Tashkent",
-            population: "35 million",
-            languages: "Uzbek, Russian",
-            position: [41.3775, 64.5853] as LatLngTuple,
-            facts: [
-                "Home to historic Silk Road cities like Samarkand, Bukhara, and Khiva",
-                "Known for its intricate blue-tiled Islamic architecture",
-                "Rich tradition of handicrafts including silk weaving and ceramics",
-            ],
-        },
-        {
-            id: "kyrgyzstan",
-            name: "Kyrgyzstan",
-            capital: "Bishkek",
-            population: "6.7 million",
-            languages: "Kyrgyz, Russian",
-            position: [41.2044, 74.7661] as LatLngTuple,
-            facts: [
-                "Known as the 'Switzerland of Central Asia' for its mountainous terrain",
-                "Home to Lake Issyk-Kul, the second-largest alpine lake in the world",
-                "Strong nomadic traditions including the epic of Manas, one of the longest poems in the world",
-            ],
-        },
-        {
-            id: "tajikistan",
-            name: "Tajikistan",
-            capital: "Dushanbe",
-            population: "9.8 million",
-            languages: "Tajik, Russian",
-            position: [38.8610, 71.2761] as LatLngTuple,
-            facts: [
-                "Over 90% of the country is mountainous",
-                "Tajik language is closely related to Persian/Farsi",
-                "Home to the Pamir Mountains, known as the 'Roof of the World'",
-            ],
-        },
-        {
-            id: "turkmenistan",
-            name: "Turkmenistan",
-            capital: "Ashgabat",
-            population: "6.2 million",
-            languages: "Turkmen, Russian",
-            position: [38.9697, 59.5563] as LatLngTuple,
-            facts: [
-                "Home to the Darvaza Gas Crater, known as the 'Door to Hell'",
-                "Famous for its handwoven Turkmen carpets",
-                "Ashgabat holds the world record for the highest concentration of white marble buildings",
-            ],
-        },
-    ]
 
     const centerPosition: LatLngTuple = [42.8746, 71.2761]
     const currentCountry = countries.find((c) => c.id === selectedCountry)

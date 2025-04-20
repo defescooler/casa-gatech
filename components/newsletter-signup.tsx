@@ -33,7 +33,7 @@ export function NewsletterSignup() {
                 <div className="flex flex-col items-center justify-center space-y-2 text-center">
                     <CheckCircle2 className="h-8 w-8 text-green-500" />
                     <h3 className="text-lg font-medium">Thank you for subscribing!</h3>
-                    <p className="text-sm text-muted-foreground">You'll receive updates about our events and activities.</p>
+                    <p className="text-sm text-muted-foreground">You&#39;ll receive updates about our events and activities.</p>
                     <Button
                         variant="link"
                         onClick={() => {

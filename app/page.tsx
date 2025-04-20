@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
 
 import {flagsMetaData, leadershipTeam, photoAlbum, events} from "@/lib/data";
+import {getLastCommitDate} from "@/lib/git-info";
 
 export default function Home() {
     return (
@@ -301,8 +302,8 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <p className="mt-4 text-sm text-muted-foreground">
-                                    "CASA has been my home away from home at Georgia Tech. It's where I've made lifelong friends and
-                                    stayed connected to my culture."
+                                    &#34;CASA has been my home away from home at Georgia Tech. It&#39;s where I&#39;ve made lifelong friends and
+                                    stayed connected to my culture.&#34;
                                 </p>
                             </div>
                             <div className="rounded-lg border bg-background p-6 shadow-sm">
@@ -320,8 +321,8 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <p className="mt-4 text-sm text-muted-foreground">
-                                    "Through CASA events, I've been able to share my Uzbek heritage with the Georgia Tech community and
-                                    learn about other Central Asian cultures."
+                                    &#34;Through CASA events, I&#39;ve been able to share my Uzbek heritage with the Georgia Tech community and
+                                    learn about other Central Asian cultures.&#34;
                                 </p>
                             </div>
                             <div className="rounded-lg border bg-background p-6 shadow-sm">
@@ -339,8 +340,8 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <p className="mt-4 text-sm text-muted-foreground">
-                                    "As an international student from Kyrgyzstan, CASA has helped me navigate campus life and build a
-                                    supportive community at Georgia Tech."
+                                    &#34;As an international student from Kyrgyzstan, CASA has helped me navigate campus life and build a
+                                    supportive community at Georgia Tech.&#34;
                                 </p>
                             </div>
                         </div>
@@ -428,9 +429,14 @@ export default function Home() {
                         <div className="h-6 w-6 rounded-full bg-gradient-to-br from-amber-400 to-amber-600"></div>
                         <span className="text-sm font-semibold">CASA GT</span>
                     </div>
-                    <p className="text-center text-sm text-muted-foreground md:text-left">
-                        © 2025 Central Asian Student Association at Georgia Tech. All rights reserved.
-                    </p>
+                    <div className="flex flex-col items-center md:items-start">
+                        <p className="text-center text-sm text-muted-foreground md:text-left">
+                            © 2025 Central Asian Student Association at Georgia Tech. All rights reserved.
+                        </p>
+                        <p className="text-center text-xs text-muted-foreground md:text-left">
+                            Last updated: {getLastCommitDate()}
+                        </p>
+                    </div>
                     <div className="flex gap-4">
                         <Link href="/join" className="text-sm text-muted-foreground hover:text-foreground">
                             Join Us

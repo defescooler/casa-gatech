@@ -26,7 +26,7 @@ export function JoinForm() {
                 <CheckCircle2 className="h-12 w-12 text-green-500" />
                 <h3 className="text-xl font-semibold">Thank You for Joining!</h3>
                 <p className="text-muted-foreground">
-                    Your membership request has been received. We'll be in touch with you soon.
+                    Your membership request has been received. We&#39;ll be in touch with you soon.
                 </p>
                 <Button variant="outline" onClick={() => setSubmitted(false)}>
                     Submit Another Request
