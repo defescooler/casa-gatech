@@ -7,6 +7,8 @@ import { MobileNav } from '@/components/mobile-nav';
 import { flagsMetaData, leadershipTeam, photoAlbum, events } from '@/lib/data';
 import { getLastCommitDate } from '@/lib/git-info';
 
+import { NewsletterDialog } from '@/components/newsletter-dialog';
+
 export default function Home() {
     return (
         <div className='flex min-h-screen flex-col'>
@@ -497,6 +499,8 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className='mt-8 flex justify-center gap-4'>
+                                <NewsletterDialog />
+
                                 <Button
                                     variant='outline'
                                     size='icon'

@@ -3,7 +3,7 @@
 import type React from 'react';
 
 import { useState } from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -11,8 +11,9 @@ export function NewsletterSignup() {
     const [email, setEmail] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         // Basic email validation
@@ -21,10 +22,32 @@ export function NewsletterSignup() {
             return;
         }
 
-        // TODO: In a real application, you would send this to your API
-        console.log('Subscribing email:', email);
-        setSubmitted(true);
+        setLoading(true);
         setError('');
+
+        try {
+            const response = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to subscribe');
+            }
+
+            setSubmitted(true);
+        } catch (err) {
+            setError(
+                err instanceof Error ? err.message : 'Something went wrong'
+            );
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -65,8 +88,18 @@ export function NewsletterSignup() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className={error ? 'border-red-500' : ''}
+                            disabled={loading}
                         />
-                        <Button type='submit'>Subscribe</Button>
+                        <Button type='submit' disabled={loading}>
+                            {loading ? (
+                                <>
+                                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                                    Wait
+                                </>
+                            ) : (
+                                'Subscribe'
+                            )}
+                        </Button>
                     </div>
                     {error && <p className='text-xs text-red-500'>{error}</p>}
                 </form>
