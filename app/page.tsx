@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight, Calendar, Mail, MapPin, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default function Home() {
   return (
@@ -9,8 +10,10 @@ export default function Home() {
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-amber-600"></div>
-              <span className="text-lg font-semibold tracking-tight">CASA GT</span>
+              <Link href="/" className="flex items-center gap-2">
+                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-amber-600"></div>
+                <span className="text-lg font-semibold tracking-tight">CASA GT</span>
+              </Link>
             </div>
             <nav className="hidden md:flex md:gap-6">
               <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
@@ -19,7 +22,7 @@ export default function Home() {
               <Link href="#countries" className="text-sm font-medium transition-colors hover:text-primary">
                 Countries
               </Link>
-              <Link href="#events" className="text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/events" className="text-sm font-medium transition-colors hover:text-primary">
                 Events
               </Link>
               <Link href="#gallery" className="text-sm font-medium transition-colors hover:text-primary">
@@ -28,34 +31,19 @@ export default function Home() {
               <Link href="#leadership" className="text-sm font-medium transition-colors hover:text-primary">
                 Leadership
               </Link>
-              <Link href="#resources" className="text-sm font-medium transition-colors hover:text-primary">
-                Resources
+              <Link href="/explore" className="text-sm font-medium transition-colors hover:text-primary">
+                Explore
               </Link>
               <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
             </nav>
-            <Button size="sm" className="hidden md:inline-flex">
-              Join Us
-            </Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
+            <div className="flex items-center gap-4">
+              <Link href="/join" className="hidden md:inline-flex">
+                <Button size="sm">Join Us</Button>
+              </Link>
+              <MobileNav />
+            </div>
           </div>
         </header>
         <main className="flex-1">
@@ -71,13 +59,17 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg">
-                  Join Our Community
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Learn More
-                </Button>
+                <Link href="/join">
+                  <Button size="lg">
+                    Join Our Community
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/explore">
+                  <Button variant="outline" size="lg">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           </section>
@@ -159,11 +151,30 @@ export default function Home() {
                     </div>
                 ))}
               </div>
+              <div className="mt-8 text-center">
+                <Link href="/explore">
+                  <Button variant="outline">
+                    Explore Central Asia
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </section>
-          <section id="events" className="bg-slate-50 py-12 md:py-16">
+          <section id="events" className="py-12 md:py-16">
             <div className="container">
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Upcoming Events</h2>
+              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+                <div>
+                  <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Upcoming Events</h2>
+                  <p className="mt-2 text-muted-foreground">Join us at our upcoming events and activities</p>
+                </div>
+                <Link href="/events">
+                  <Button variant="outline">
+                    View All Events
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
                   <div className="flex items-center gap-2 text-amber-600">
@@ -178,10 +189,12 @@ export default function Home() {
                     <MapPin className="h-4 w-4" />
                     <span>Student Center Ballroom</span>
                   </div>
-                  <Button variant="link" className="mt-4 h-8 p-0">
-                    Learn more
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
+                  <Link href="/events">
+                    <Button variant="link" className="mt-4 h-8 p-0">
+                      Learn more
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
                   <div className="flex items-center gap-2 text-amber-600">
@@ -196,10 +209,12 @@ export default function Home() {
                     <MapPin className="h-4 w-4" />
                     <span>Klaus Advanced Computing Building</span>
                   </div>
-                  <Button variant="link" className="mt-4 h-8 p-0">
-                    Learn more
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
+                  <Link href="/events">
+                    <Button variant="link" className="mt-4 h-8 p-0">
+                      Learn more
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
                 <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
                   <div className="flex items-center gap-2 text-amber-600">
@@ -215,10 +230,12 @@ export default function Home() {
                     <MapPin className="h-4 w-4" />
                     <span>Georgia Tech Hotel and Conference Center</span>
                   </div>
-                  <Button variant="link" className="mt-4 h-8 p-0">
-                    Learn more
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
+                  <Link href="/events">
+                    <Button variant="link" className="mt-4 h-8 p-0">
+                      Learn more
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -269,70 +286,56 @@ export default function Home() {
             </div>
           </section>
           <section id="resources" className="container py-12 md:py-16">
-            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Cultural Resources</h2>
-            <p className="mt-2 max-w-3xl text-muted-foreground">
-              Explore the rich cultural heritage of Central Asia through these resources.
-            </p>
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Cultural Resources</h2>
+                <p className="mt-2 max-w-3xl text-muted-foreground">
+                  Explore the rich cultural heritage of Central Asia through these resources.
+                </p>
+              </div>
+              <Link href="/explore">
+                <Button>
+                  Explore More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg border bg-background p-6 shadow-sm">
                 <h3 className="text-xl font-semibold">Traditional Music</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Discover the diverse musical traditions of Central Asia, from nomadic folk songs to classical maqam.
                 </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore Music
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <Link href="/explore">
+                  <Button variant="link" className="mt-4 h-8 p-0">
+                    Explore Music
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
               <div className="rounded-lg border bg-background p-6 shadow-sm">
                 <h3 className="text-xl font-semibold">Cuisine & Recipes</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Learn about Central Asian culinary traditions and try authentic recipes from the region.
                 </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore Cuisine
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <Link href="/explore">
+                  <Button variant="link" className="mt-4 h-8 p-0">
+                    Explore Cuisine
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
               <div className="rounded-lg border bg-background p-6 shadow-sm">
                 <h3 className="text-xl font-semibold">Language Resources</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Resources for learning Central Asian languages, including Kazakh, Uzbek, Kyrgyz, Tajik, and Turkmen.
                 </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore Languages
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </div>
-              <div className="rounded-lg border bg-background p-6 shadow-sm">
-                <h3 className="text-xl font-semibold">Literature & Poetry</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Explore the rich literary traditions of Central Asia, from ancient epics to contemporary works.
-                </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore Literature
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </div>
-              <div className="rounded-lg border bg-background p-6 shadow-sm">
-                <h3 className="text-xl font-semibold">Arts & Crafts</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Discover traditional Central Asian arts and crafts, including textiles, ceramics, and metalwork.
-                </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore Arts
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </div>
-              <div className="rounded-lg border bg-background p-6 shadow-sm">
-                <h3 className="text-xl font-semibold">History & Heritage</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Learn about the rich history of Central Asia, from ancient civilizations to modern nations.
-                </p>
-                <Button variant="link" className="mt-4 h-8 p-0">
-                  Explore History
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <Link href="/explore">
+                  <Button variant="link" className="mt-4 h-8 p-0">
+                    Explore Languages
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </section>
@@ -489,11 +492,14 @@ export default function Home() {
               © 2025 Central Asian Student Association at Georgia Tech. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-                Privacy
+              <Link href="/join" className="text-sm text-muted-foreground hover:text-foreground">
+                Join Us
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-                Terms
+              <Link href="/events" className="text-sm text-muted-foreground hover:text-foreground">
+                Events
+              </Link>
+              <Link href="/explore" className="text-sm text-muted-foreground hover:text-foreground">
+                Explore
               </Link>
             </div>
           </div>

@@ -53,11 +53,25 @@ export function MobileNav() {
                         About
                     </Link>
                     <Link
-                        href="#events"
+                        href="#countries"
+                        className="text-lg font-medium transition-colors hover:text-primary"
+                        onClick={() => setOpen(false)}
+                    >
+                        Countries
+                    </Link>
+                    <Link
+                        href="/events"
                         className="text-lg font-medium transition-colors hover:text-primary"
                         onClick={() => setOpen(false)}
                     >
                         Events
+                    </Link>
+                    <Link
+                        href="#gallery"
+                        className="text-lg font-medium transition-colors hover:text-primary"
+                        onClick={() => setOpen(false)}
+                    >
+                        Gallery
                     </Link>
                     <Link
                         href="#leadership"
@@ -67,18 +81,25 @@ export function MobileNav() {
                         Leadership
                     </Link>
                     <Link
+                        href="/explore"
+                        className="text-lg font-medium transition-colors hover:text-primary"
+                        onClick={() => setOpen(false)}
+                    >
+                        Explore
+                    </Link>
+                    <Link
                         href="#contact"
                         className="text-lg font-medium transition-colors hover:text-primary"
                         onClick={() => setOpen(false)}
                     >
                         Contact
                     </Link>
+                    <div className="mt-4 pt-4 border-t">
+                        <Link href="/join" onClick={() => setOpen(false)}>
+                            <Button className="w-full">Join Us</Button>
+                        </Link>
+                    </div>
                 </nav>
-                <div className="mt-8">
-                    <Button className="w-full" onClick={() => setOpen(false)}>
-                        Join Us
-                    </Button>
-                </div>
             </SheetContent>
         </Sheet>
     )
