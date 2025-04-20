@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import CulturalMap from '../cultural-map';
+import CulturalMap from '@/components/cultural-map';
 
 export default function ExplorePage() {
     return (
