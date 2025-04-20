@@ -91,22 +91,22 @@ const photoAlbum = [
         src: "/photo-album/golf-photo.jpeg",
         alt: "",
     },
-    {
-        src: "/placeholder.svg?height=300&width=300",
-        alt: "",
-    },
-    {
-        src: "/placeholder.svg?height=300&width=300",
-        alt: "",
-    },
-    {
-        src: "/placeholder.svg?height=300&width=300",
-        alt: "",
-    },
-    {
-        src: "/placeholder.svg?height=300&width=300",
-        alt: "",
-    },
+    // {
+    //     src: "/placeholder.svg?height=300&width=300",
+    //     alt: "",
+    // },
+    // {
+    //     src: "/placeholder.svg?height=300&width=300",
+    //     alt: "",
+    // },
+    // {
+    //     src: "/placeholder.svg?height=300&width=300",
+    //     alt: "",
+    // },
+    // {
+    //     src: "/placeholder.svg?height=300&width=300",
+    //     alt: "",
+    // },
 ]
 
 export default function Home() {

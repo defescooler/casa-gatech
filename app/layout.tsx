@@ -6,18 +6,18 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Central Asian Student Association - Georgia Tech",
-  description: "Official website of the Central Asian Student Association at Georgia Tech",
+    title: "Central Asian Student Association - Georgia Tech",
+    description: "Official website of the Central Asian Student Association at Georgia Tech",
 }
 
 export default function RootLayout({
-                                     children,
+                                       children,
                                    }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-      <html lang="en">
-      <body className={inter.className}>{children}</body>
-      </html>
-  )
+    return (
+        <html lang="en" className="scroll-smooth">
+        <body className={inter.className}>{children}</body>
+        </html>
+    )
 }
