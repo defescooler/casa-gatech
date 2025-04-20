@@ -46,7 +46,7 @@ const leadershipTeam = [
         name: "Alikhan Uzak",
         role: "Vice President",
         country: "Kazakhstan",
-        src: "/placeholder.svg?height=200&width=200"
+        src: "/leadership-photos/alikhan.jpeg",
     },
     {
         name: "Aksana Doss",
@@ -88,7 +88,7 @@ const photoAlbum = [
         alt: "",
     },
     {
-        src: "/placeholder.svg?height=300&width=300",
+        src: "/photo-album/golf-photo.jpeg",
         alt: "",
     },
     {
