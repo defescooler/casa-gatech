@@ -84,7 +84,7 @@ const photoAlbum = [
         alt: "Cultural Workshop",
     },
     {
-        src: "/placeholder.svg?height=300&width=300",
+        src: "/photo-album/IMG_5838.JPG",
         alt: "",
     },
     {
