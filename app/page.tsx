@@ -40,31 +40,37 @@ const leadershipTeam = [
         name: "Iskander Dyussenov",
         role: "President",
         country: "Kazakhstan",
+        src: "/placeholder.svg?height=200&width=200",
     },
     {
         name: "Alikhan Uzak",
         role: "Vice President",
         country: "Kazakhstan",
+        src: "/placeholder.svg?height=200&width=200"
     },
     {
         name: "Aksana Doss",
         role: "Treasurer",
         country: "Kazakhstan",
+        src: "/placeholder.svg?height=200&width=200"
     },
     {
         name: "Daniil Tatarinov",
         role: "Head of IT",
         country: "Kazakhstan",
+        src: "/leadership-photos/daniil.jpeg",
     },
     {
         name: "Aselia Urmanbetova",
         role: "Faculty/Staff Advisor",
         country: "Kyrgyzstan",
+        src: "/placeholder.svg?height=200&width=200",
     },
     {
         name: "Arsen Kozhabek",
         role: "Elbasy",
         country: "Kazakhstan",
+        src: "/leadership-photos/arsen.jpeg",
     }
 ]
 
@@ -333,12 +339,12 @@ export default function Home() {
                 </section>
                 <section id="leadership" className="container py-12 md:py-16">
                     <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Leadership</h2>
-                    <div className="mt-8 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div className="mt-8 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                         {leadershipTeam.map((member, index) => (
                             <div key={index} className="group flex flex-col items-center">
                                 <div className="overflow-hidden rounded-full">
                                     <img
-                                        src={`/placeholder.svg?height=200&width=200&text=${index + 1}`}
+                                        src={member.src}
                                         alt={member.name}
                                         className="h-32 w-32 object-cover transition-transform group-hover:scale-105"
                                     />
