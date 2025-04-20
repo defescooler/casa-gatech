@@ -40,7 +40,7 @@ const leadershipTeam = [
         name: "Iskander Dyussenov",
         role: "President",
         country: "Kazakhstan",
-        src: "/placeholder.svg?height=200&width=200",
+        src: "/leadership-photos/iskander.jpeg",
     },
     {
         name: "Alikhan Uzak",
@@ -64,7 +64,7 @@ const leadershipTeam = [
         name: "Aselia Urmanbetova",
         role: "Faculty/Staff Advisor",
         country: "Kyrgyzstan",
-        src: "/placeholder.svg?height=200&width=200",
+        src: "/leadership-photos/aselia.jpeg",
     },
     {
         name: "Arsen Kozhabek",
