@@ -4,110 +4,7 @@ import { ArrowRight, Calendar, Mail, MapPin, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileNav } from "@/components/mobile-nav"
 
-const flagsMetaData = [
-    {
-        name: "Uzbekistan",
-        flag: "/flags/uz-flag.png",
-        description:
-            "Home to historic Silk Road cities with stunning Islamic architecture and rich traditions.",
-    },
-    {
-        name: "Kyrgyzstan",
-        flag: "/flags/kg-flag.png",
-        description:
-            "A mountainous nation with a strong nomadic culture and breathtaking natural landscapes.",
-    },
-    {
-        name: "Kazakhstan",
-        flag: "/flags/kz-flag.png",
-        description:
-            "The world's largest landlocked country, known for its nomadic heritage and modern cities.",
-    },
-    {
-        name: "Tajikistan",
-        flag: "/flags/tj-flag.png",
-        description: "Known for its rugged mountains, Persian cultural influence, and ancient heritage.",
-    },
-    {
-        name: "Turkmenistan",
-        flag: "/flags/tm-flag.png",
-        description: "Famous for its ancient Silk Road ruins, unique traditions, and natural gas reserves.",
-    },
-];
-
-const leadershipTeam = [
-    {
-        name: "Iskander Dyussenov",
-        role: "President",
-        country: "Kazakhstan",
-        src: "/leadership-photos/iskander.jpeg",
-    },
-    {
-        name: "Alikhan Uzak",
-        role: "Vice President",
-        country: "Kazakhstan",
-        src: "/leadership-photos/alikhan.jpeg",
-    },
-    {
-        name: "Aksana Doss",
-        role: "Treasurer",
-        country: "Kazakhstan",
-        src: "/leadership-photos/aksana.jpeg",
-    },
-    {
-        name: "Daniil Tatarinov",
-        role: "Head of IT",
-        country: "Kazakhstan",
-        src: "/leadership-photos/daniil.jpeg",
-    },
-    {
-        name: "Aselia Urmanbetova",
-        role: "Faculty/Staff Advisor",
-        country: "Kyrgyzstan",
-        src: "/leadership-photos/aselia.jpeg",
-    },
-    {
-        name: "Arsen Kozhabek",
-        role: "Elbasy",
-        country: "Kazakhstan",
-        src: "/leadership-photos/arsen.jpeg",
-    }
-]
-
-const photoAlbum = [
-    {
-        src: "/photo-album/nauryz-photo.jpeg",
-        alt: "Nauryz Celebration",
-    },
-    {
-        src: "/photo-album/IMG_5804.png",
-        alt: "Cultural Workshop",
-    },
-    {
-        src: "/photo-album/IMG_5838.JPG",
-        alt: "",
-    },
-    {
-        src: "/photo-album/golf-photo.jpeg",
-        alt: "",
-    },
-    // {
-    //     src: "/placeholder.svg?height=300&width=300",
-    //     alt: "",
-    // },
-    // {
-    //     src: "/placeholder.svg?height=300&width=300",
-    //     alt: "",
-    // },
-    // {
-    //     src: "/placeholder.svg?height=300&width=300",
-    //     alt: "",
-    // },
-    // {
-    //     src: "/placeholder.svg?height=300&width=300",
-    //     alt: "",
-    // },
-]
+import {flagsMetaData, leadershipTeam, photoAlbum, events} from "@/lib/data";
 
 export default function Home() {
     return (
@@ -259,67 +156,30 @@ export default function Home() {
                             </Link>
                         </div>
                         <div className="mt-8 grid gap-6 md:grid-cols-3">
-                            <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
-                                <div className="flex items-center gap-2 text-amber-600">
-                                    <Calendar className="h-5 w-5" />
-                                    <span className="text-sm font-medium">April 25, 2025</span>
+                            {events.slice(0, 3).map((event) => (
+                                <div key={event.id} className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
+                                    <div className="flex items-center gap-2 text-amber-600">
+                                        <Calendar className="h-5 w-5" />
+                                        <span className="text-sm font-medium">{event.date}</span>
+                                    </div>
+                                    <h3 className="mt-3 text-xl font-semibold">{event.title}</h3>
+                                    <p className="mt-2 text-sm text-muted-foreground">
+                                        {event.description.length > 100
+                                            ? `${event.description.substring(0, 100)}...`
+                                            : event.description}
+                                    </p>
+                                    <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                                        <MapPin className="h-4 w-4" />
+                                        <span>{event.location}</span>
+                                    </div>
+                                    <Link href="/events">
+                                        <Button variant="link" className="mt-4 h-8 p-0">
+                                            Learn more
+                                            <ArrowRight className="ml-1 h-4 w-4" />
+                                        </Button>
+                                    </Link>
                                 </div>
-                                <h3 className="mt-3 text-xl font-semibold">Nowruz Celebration</h3>
-                                <p className="mt-2 text-sm text-muted-foreground">
-                                    Join us for our annual Nowruz celebration featuring traditional food, music, and dance performances.
-                                </p>
-                                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-                                    <MapPin className="h-4 w-4" />
-                                    <span>Student Center Ballroom</span>
-                                </div>
-                                <Link href="/events">
-                                    <Button variant="link" className="mt-4 h-8 p-0">
-                                        Learn more
-                                        <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Button>
-                                </Link>
-                            </div>
-                            <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
-                                <div className="flex items-center gap-2 text-amber-600">
-                                    <Calendar className="h-5 w-5" />
-                                    <span className="text-sm font-medium">May 10, 2025</span>
-                                </div>
-                                <h3 className="mt-3 text-xl font-semibold">Cultural Workshop</h3>
-                                <p className="mt-2 text-sm text-muted-foreground">
-                                    Learn about traditional Central Asian arts and crafts in this hands-on workshop led by local artisans.
-                                </p>
-                                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-                                    <MapPin className="h-4 w-4" />
-                                    <span>Klaus Advanced Computing Building</span>
-                                </div>
-                                <Link href="/events">
-                                    <Button variant="link" className="mt-4 h-8 p-0">
-                                        Learn more
-                                        <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Button>
-                                </Link>
-                            </div>
-                            <div className="group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow">
-                                <div className="flex items-center gap-2 text-amber-600">
-                                    <Calendar className="h-5 w-5" />
-                                    <span className="text-sm font-medium">June 5, 2025</span>
-                                </div>
-                                <h3 className="mt-3 text-xl font-semibold">End of Year Gala</h3>
-                                <p className="mt-2 text-sm text-muted-foreground">
-                                    Celebrate the end of the academic year with a formal dinner featuring Central Asian cuisine and
-                                    entertainment.
-                                </p>
-                                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-                                    <MapPin className="h-4 w-4" />
-                                    <span>Georgia Tech Hotel and Conference Center</span>
-                                </div>
-                                <Link href="/events">
-                                    <Button variant="link" className="mt-4 h-8 p-0">
-                                        Learn more
-                                        <ArrowRight className="ml-1 h-4 w-4" />
-                                    </Button>
-                                </Link>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
