@@ -201,41 +201,58 @@ export default function Home() {
                                 </Button>
                             </Link>
                         </div>
-                        <div className='mt-8 grid gap-6 md:grid-cols-3'>
-                            {events.slice(0, 3).map((event) => (
-                                <div
-                                    key={event.id}
-                                    className='group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow'
-                                >
-                                    <div className='flex items-center gap-2 text-amber-600'>
-                                        <Calendar className='h-5 w-5' />
-                                        <span className='text-sm font-medium'>
-                                            {event.date}
-                                        </span>
-                                    </div>
-                                    <h3 className='mt-3 text-xl font-semibold'>
-                                        {event.title}
-                                    </h3>
-                                    <p className='mt-2 text-sm text-muted-foreground'>
-                                        {event.description.length > 100
-                                            ? `${event.description.substring(0, 100)}...`
-                                            : event.description}
-                                    </p>
-                                    <div className='mt-4 flex items-center gap-2 text-sm text-muted-foreground'>
-                                        <MapPin className='h-4 w-4' />
-                                        <span>{event.location}</span>
-                                    </div>
-                                    <Link href='/events'>
-                                        <Button
-                                            variant='link'
-                                            className='mt-4 h-8 p-0'
+                        <div className='mt-8'>
+                            {events.length > 0 ? (
+                                <div className='grid gap-6 md:grid-cols-3'>
+                                    {events.slice(0, 3).map((event) => (
+                                        <div
+                                            key={event.id}
+                                            className='group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow'
                                         >
-                                            Learn more
-                                            <ArrowRight className='ml-1 h-4 w-4' />
-                                        </Button>
-                                    </Link>
+                                            <div className='flex items-center gap-2 text-amber-600'>
+                                                <Calendar className='h-5 w-5' />
+                                                <span className='text-sm font-medium'>
+                                                    {event.date}
+                                                </span>
+                                            </div>
+                                            <h3 className='mt-3 text-xl font-semibold'>
+                                                {event.title}
+                                            </h3>
+                                            <p className='mt-2 text-sm text-muted-foreground'>
+                                                {event.description.length > 100
+                                                    ? `${event.description.substring(0, 100)}...`
+                                                    : event.description}
+                                            </p>
+                                            <div className='mt-4 flex items-center gap-2 text-sm text-muted-foreground'>
+                                                <MapPin className='h-4 w-4' />
+                                                <span>{event.location}</span>
+                                            </div>
+                                            <Link href='/events'>
+                                                <Button
+                                                    variant='link'
+                                                    className='mt-4 h-8 p-0'
+                                                >
+                                                    Learn more
+                                                    <ArrowRight className='ml-1 h-4 w-4' />
+                                                </Button>
+                                            </Link>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            ) : (
+                                <div className='flex flex-col items-center justify-center rounded-lg border bg-background p-8 text-center'>
+                                    <Calendar className='h-12 w-12 text-amber-600 opacity-70' />
+                                    <h3 className='mt-4 text-xl font-semibold'>
+                                        No Upcoming Events
+                                    </h3>
+                                    <p className='mt-2 max-w-md text-muted-foreground'>
+                                        We're currently planning our next
+                                        events. Check back soon for updates or
+                                        subscribe to our newsletter to be
+                                        notified.
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </section>

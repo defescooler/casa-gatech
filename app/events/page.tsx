@@ -31,48 +31,65 @@ export default function EventsPage() {
                     Asian cultures and connect with our community.
                 </p>
             </div>
-            <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-                {events.map((event) => (
-                    <Card
-                        key={event.id}
-                        className='flex flex-col overflow-hidden'
-                    >
-                        <div className='aspect-video w-full overflow-hidden'>
-                            <img
-                                src={event.image || '/placeholder.svg'}
-                                alt={event.title}
-                                className='h-full w-full object-cover'
-                            />
-                        </div>
-                        <CardHeader>
-                            <div className='flex items-center gap-2 text-amber-600'>
-                                <Calendar className='h-5 w-5' />
-                                <span className='text-sm font-medium'>
-                                    {event.date}
-                                </span>
+            {events.length > 0 ? (
+                <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+                    {events.map((event) => (
+                        <Card
+                            key={event.id}
+                            className='flex flex-col overflow-hidden'
+                        >
+                            <div className='aspect-video w-full overflow-hidden'>
+                                <img
+                                    src={event.image || '/placeholder.svg'}
+                                    alt={event.title}
+                                    className='h-full w-full object-cover'
+                                />
                             </div>
-                            <CardTitle className='text-xl'>
-                                {event.title}
-                            </CardTitle>
-                            <CardDescription>{event.time}</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <p className='text-sm text-muted-foreground'>
-                                {event.description}
-                            </p>
-                            <div className='mt-4 flex items-center gap-2 text-sm text-muted-foreground'>
-                                <MapPin className='h-4 w-4' />
-                                <span>{event.location}</span>
-                            </div>
-                        </CardContent>
-                        <CardFooter className='mt-auto'>
-                            <Button variant='outline' className='w-full'>
-                                RSVP for this Event
-                            </Button>
-                        </CardFooter>
-                    </Card>
-                ))}
-            </div>
+                            <CardHeader>
+                                <div className='flex items-center gap-2 text-amber-600'>
+                                    <Calendar className='h-5 w-5' />
+                                    <span className='text-sm font-medium'>
+                                        {event.date}
+                                    </span>
+                                </div>
+                                <CardTitle className='text-xl'>
+                                    {event.title}
+                                </CardTitle>
+                                <CardDescription>{event.time}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p className='text-sm text-muted-foreground'>
+                                    {event.description}
+                                </p>
+                                <div className='mt-4 flex items-center gap-2 text-sm text-muted-foreground'>
+                                    <MapPin className='h-4 w-4' />
+                                    <span>{event.location}</span>
+                                </div>
+                            </CardContent>
+                            <CardFooter className='mt-auto'>
+                                <Button variant='outline' className='w-full'>
+                                    RSVP for this Event
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                    ))}
+                </div>
+            ) : (
+                <div className='flex flex-col items-center justify-center rounded-lg border bg-background p-12 text-center'>
+                    <Calendar className='h-16 w-16 text-amber-600 opacity-70' />
+                    <h2 className='mt-6 text-2xl font-semibold'>
+                        No Upcoming Events
+                    </h2>
+                    <p className='mt-3 max-w-lg text-muted-foreground'>
+                        We're currently planning our next events. Check back
+                        soon for updates or subscribe to our newsletter to stay
+                        informed about upcoming activities.
+                    </p>
+                    <Button className='mt-6' asChild>
+                        <Link href='/'>Return to Homepage</Link>
+                    </Button>
+                </div>
+            )}
         </div>
     );
 }
