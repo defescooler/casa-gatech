@@ -52,7 +52,7 @@ const leadershipTeam = [
         name: "Aksana Doss",
         role: "Treasurer",
         country: "Kazakhstan",
-        src: "/placeholder.svg?height=200&width=200"
+        src: "/leadership-photos/aksana.jpeg",
     },
     {
         name: "Daniil Tatarinov",
