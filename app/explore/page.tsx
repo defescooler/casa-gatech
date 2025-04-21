@@ -39,7 +39,7 @@ export default function ExplorePage() {
                     <div className='grid gap-6 md:grid-cols-2'>
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Traditional+Celebrations'
+                                src='/explore/celebrations.png'
                                 alt='Traditional celebrations'
                                 className='aspect-video w-full object-cover'
                             />
@@ -60,7 +60,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Traditional+Crafts'
+                                src='/explore/arts-and-crafts.png'
                                 alt='Traditional crafts'
                                 className='aspect-video w-full object-cover'
                             />
@@ -80,7 +80,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Traditional+Music'
+                                src='/explore/music-and-dance.png'
                                 alt='Traditional music'
                                 className='aspect-video w-full object-cover'
                             />
@@ -100,7 +100,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Traditional+Cuisine'
+                                src='/explore/cuisine.png'
                                 alt='Traditional cuisine'
                                 className='aspect-video w-full object-cover'
                             />

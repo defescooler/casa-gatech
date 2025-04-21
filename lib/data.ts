@@ -123,7 +123,7 @@ export const events: Event[] = [
     //     location: 'Inspire Residential Complex',
     //     description:
     //         'Join us for our annual Nowruz celebration featuring traditional food and music. Nowruz, the Persian New Year, is celebrated by many Central Asian cultures and marks the beginning of spring.',
-    //     image: '/events/nauryz.jpeg',
+    //     image: '/events/celebrations.jpeg',
     // },
 ];
 
