@@ -125,7 +125,7 @@ export default function ExplorePage() {
                     <div className='grid gap-6 md:grid-cols-2'>
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Modern+Cities'
+                                src='/explore/urban.png'
                                 alt='Modern cities'
                                 className='aspect-video w-full object-cover'
                             />
@@ -146,7 +146,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Education'
+                                src='/explore/edu.png'
                                 alt='Education'
                                 className='aspect-video w-full object-cover'
                             />
@@ -166,7 +166,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Arts+Scene'
+                                src='/explore/contemp-arts.png'
                                 alt='Arts scene'
                                 className='aspect-video w-full object-cover'
                             />
@@ -186,7 +186,7 @@ export default function ExplorePage() {
 
                         <div className='overflow-hidden rounded-lg border'>
                             <img
-                                src='/placeholder.svg?height=400&width=600&text=Tourism'
+                                src='/explore/tourism.png'
                                 alt='Tourism'
                                 className='aspect-video w-full object-cover'
                             />
