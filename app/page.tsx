@@ -397,7 +397,7 @@ export default function Home() {
                             Hear from our members about their experiences with
                             CASA GT.
                         </p>
-                        <div className='mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+                        <div className='mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2'>
                             <div className='rounded-lg border bg-background p-6 shadow-sm'>
                                 <div className='flex items-center gap-4'>
                                     <div className='h-12 w-12 overflow-hidden rounded-full'>
@@ -421,31 +421,6 @@ export default function Home() {
                                     Georgia Tech. It&#39;s where I&#39;ve made
                                     lifelong friends and stayed connected to my
                                     culture.&#34;
-                                </p>
-                            </div>
-                            <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                                <div className='flex items-center gap-4'>
-                                    <div className='h-12 w-12 overflow-hidden rounded-full'>
-                                        <img
-                                            src='/testimonials/firuz.jpeg'
-                                            alt='Student'
-                                            className='h-full w-full object-cover'
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='font-semibold'>
-                                            Firuz Khamidov
-                                        </h3>
-                                        <p className='text-sm text-muted-foreground'>
-                                            Material Science, Class of 2024
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className='mt-4 text-sm text-muted-foreground'>
-                                    &#34;Through CASA events, I&#39;ve been able
-                                    to share my Uzbek heritage with the Georgia
-                                    Tech community and learn about other Central
-                                    Asian cultures.&#34;
                                 </p>
                             </div>
                             <div className='rounded-lg border bg-background p-6 shadow-sm'>
