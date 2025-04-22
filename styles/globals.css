@@ -229,7 +229,6 @@ footer a:hover::after {
 
 .rounded-lg.border:hover,
 .group.rounded-lg.border:hover {
-    transform: translateY(-3px);
     box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.1);
     border-color: rgba(251, 191, 36, 0.4);
 }
@@ -260,6 +259,18 @@ footer a:hover::after {
     background-color: rgba(251, 191, 36, 0.1);
     transform: translateY(-2px);
     border-color: rgba(251, 191, 36, 0.4);
+}
+
+#resources button.transform-none:hover,
+#resources [class*='Button'].transform-none:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+#resources button[variant='link']:hover,
+#resources [class*='Button'][variant='link']:hover {
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 /* Link button hover effects */

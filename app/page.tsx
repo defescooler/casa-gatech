@@ -346,7 +346,10 @@ export default function Home() {
                                 classical maqam.
                             </p>
                             <Link href='/explore'>
-                                <Button variant='link' className='mt-4 h-8 p-0'>
+                                <Button
+                                    variant='link'
+                                    className='mt-4 h-8 transform-none p-0'
+                                >
                                     Explore Music
                                     <ArrowRight className='ml-1 h-4 w-4' />
                                 </Button>
@@ -361,7 +364,10 @@ export default function Home() {
                                 and try authentic recipes from the region.
                             </p>
                             <Link href='/explore'>
-                                <Button variant='link' className='mt-4 h-8 p-0'>
+                                <Button
+                                    variant='link'
+                                    className='mt-4 h-8 transform-none p-0'
+                                >
                                     Explore Cuisine
                                     <ArrowRight className='ml-1 h-4 w-4' />
                                 </Button>
@@ -377,7 +383,10 @@ export default function Home() {
                                 Turkmen.
                             </p>
                             <Link href='/explore'>
-                                <Button variant='link' className='mt-4 h-8 p-0'>
+                                <Button
+                                    variant='link'
+                                    className='mt-4 h-8 transform-none p-0'
+                                >
                                     Explore Languages
                                     <ArrowRight className='ml-1 h-4 w-4' />
                                 </Button>
