@@ -74,7 +74,7 @@ export default function Home() {
                         </div>
                     </nav>
                     <div className='flex items-center gap-4'>
-                        <Link href='/join' className='hidden md:inline-flex'>
+                        <Link href='#contact' className='hidden md:inline-flex'>
                             <Button size='sm'>Join Us</Button>
                         </Link>
                         <MobileNav />
@@ -593,12 +593,6 @@ export default function Home() {
                         </p>
                     </div>
                     <div className='flex gap-4'>
-                        <Link
-                            href='/join'
-                            className='text-sm text-muted-foreground hover:text-foreground'
-                        >
-                            Join Us
-                        </Link>
                         <Link
                             href='/events'
                             className='text-sm text-muted-foreground hover:text-foreground'
