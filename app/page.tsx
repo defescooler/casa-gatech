@@ -459,7 +459,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <h3 className='font-semibold'>
-                                            Ramazan Amantai
+                                            Erkosh Paksushi
                                         </h3>
                                         <p className='text-sm text-muted-foreground'>
                                             Food Management, Class of 667
