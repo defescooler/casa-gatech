@@ -1,0 +1,48 @@
+{
+    "name": "Central Asian Student Association - Georgia Tech",
+    "short_name": "CASA GT",
+    "description": "Official website of the Central Asian Student Association at Georgia Tech",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f59e0b",
+    "icons": [
+        {
+            "src": "/icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "orientation": "portrait",
+    "lang": "en-US",
+    "categories": ["education", "social", "community"],
+    "screenshots": [
+        {
+            "src": "/screenshots/home.jpg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "label": "Home page of CASA GT website"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Join Us",
+            "url": "/join",
+            "description": "Join the Central Asian Student Association"
+        },
+        {
+            "name": "Events",
+            "url": "/events",
+            "description": "View upcoming events"
+        }
+    ]
+}
