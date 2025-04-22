@@ -480,7 +480,12 @@ export default function Home() {
                             <div className='mt-6 flex flex-col gap-4'>
                                 <div className='flex items-center justify-center gap-2'>
                                     <Mail className='h-5 w-5 text-amber-600' />
-                                    <span>adoss35 [at] gatech [dot] edu</span>
+                                    <Link
+                                        href='mailto:adoss35@gatech.edu'
+                                        className='hover:underline'
+                                    >
+                                        adoss35 [at] gatech [dot] edu
+                                    </Link>
                                 </div>
                                 <div className='flex items-center justify-center gap-2'>
                                     <Users className='h-5 w-5 text-amber-600' />
