@@ -81,7 +81,7 @@ export default function EventsPage() {
                         No Upcoming Events
                     </h2>
                     <p className='mt-3 max-w-lg text-muted-foreground'>
-                        We're currently planning our next events. Check back
+                        We&#39;re currently planning our next events. Check back
                         soon for updates or subscribe to our newsletter to stay
                         informed about upcoming activities.
                     </p>

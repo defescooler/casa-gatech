@@ -248,7 +248,7 @@ export default function Home() {
                                         No Upcoming Events
                                     </h3>
                                     <p className='mt-2 max-w-md text-muted-foreground'>
-                                        We're currently planning our next
+                                        We&#39;re currently planning our next
                                         events. Check back soon for updates or
                                         subscribe to our newsletter to be
                                         notified.
@@ -402,17 +402,17 @@ export default function Home() {
                                 <div className='flex items-center gap-4'>
                                     <div className='h-12 w-12 overflow-hidden rounded-full'>
                                         <img
-                                            src='/placeholder.svg?height=100&width=100&text=A'
+                                            src='/testimonials/aldinash.jpeg'
                                             alt='Student'
                                             className='h-full w-full object-cover'
                                         />
                                     </div>
                                     <div>
                                         <h3 className='font-semibold'>
-                                            Alina Suleimenova
+                                            Aldinash Seitenov
                                         </h3>
                                         <p className='text-sm text-muted-foreground'>
-                                            Computer Science, Class of 2024
+                                            CS + Math, Class of 2027
                                         </p>
                                     </div>
                                 </div>
@@ -427,18 +427,17 @@ export default function Home() {
                                 <div className='flex items-center gap-4'>
                                     <div className='h-12 w-12 overflow-hidden rounded-full'>
                                         <img
-                                            src='/placeholder.svg?height=100&width=100&text=B'
+                                            src='/testimonials/firuz.jpeg'
                                             alt='Student'
                                             className='h-full w-full object-cover'
                                         />
                                     </div>
                                     <div>
                                         <h3 className='font-semibold'>
-                                            Bakhtiyar Umarov
+                                            Firuz Khamidov
                                         </h3>
                                         <p className='text-sm text-muted-foreground'>
-                                            Mechanical Engineering, Class of
-                                            2025
+                                            Material Science, Class of 2024
                                         </p>
                                     </div>
                                 </div>
@@ -453,26 +452,32 @@ export default function Home() {
                                 <div className='flex items-center gap-4'>
                                     <div className='h-12 w-12 overflow-hidden rounded-full'>
                                         <img
-                                            src='/placeholder.svg?height=100&width=100&text=C'
+                                            src='/testimonials/erkosh.jpeg'
                                             alt='Student'
                                             className='h-full w-full object-cover'
                                         />
                                     </div>
                                     <div>
                                         <h3 className='font-semibold'>
-                                            Cholpon Abdyldaeva
+                                            Ramazan Amantai
                                         </h3>
                                         <p className='text-sm text-muted-foreground'>
-                                            Business Administration, Class of
-                                            2023
+                                            Food Management, Class of 667
                                         </p>
                                     </div>
                                 </div>
                                 <p className='mt-4 text-sm text-muted-foreground'>
-                                    &#34;As an international student from
-                                    Kyrgyzstan, CASA has helped me navigate
-                                    campus life and build a supportive community
-                                    at Georgia Tech.&#34;
+                                    As the official sushi and pizza provider of
+                                    CASA (they just don&#39;t know it yet), I
+                                    take a great pride in crafting our famously
+                                    Shymkent-Tastak fusion cuisine. Some say our
+                                    sushi defy the laws of texture, and our
+                                    so-called &#34;TV&#34; sushi has changed
+                                    lives. I personally support every student
+                                    who’s ever eaten our food and still managed
+                                    to pass finals. True resilience! GT
+                                    students, you inspire me every day to
+                                    continue doing the bare minimum.
                                 </p>
                             </div>
                         </div>
