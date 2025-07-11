@@ -78,10 +78,10 @@ export const leadershipTeam: LeadershipMember[] = [
         src: '/leadership-photos/aselia.jpeg',
     },
     {
-        name: 'Arsen Kozhabek',
-        role: 'Elbasy',
-        country: 'Kazakhstan',
-        src: '/leadership-photos/arsen.jpeg',
+        name: 'Laman Vakilova',
+        role: 'Head of PR',
+        country: 'Azerbaijan',
+        src: '/leadership-photos/laman.jpg',
     },
 ];
 
