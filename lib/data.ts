@@ -83,6 +83,12 @@ export const leadershipTeam: LeadershipMember[] = [
         country: 'Azerbaijan',
         src: '/leadership-photos/laman.jpg',
     },
+    {
+        name: 'Arsen Kozhabek',
+        role: 'Elbasy',
+        country: 'Kazakhstan',
+        src: '/leadership-photos/arsen.jpeg',
+    },
 ];
 
 export const photoAlbum = [
