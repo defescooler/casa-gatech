@@ -121,16 +121,16 @@ export interface Event {
 }
 
 export const events: Event[] = [
-    // {
-    //     id: 1,
-    //     title: 'Nowruz Celebration',
-    //     date: 'March 29, 2025',
-    //     time: '6:00 PM - 12:00 AM',
-    //     location: 'Inspire Residential Complex',
-    //     description:
-    //         'Join us for our annual Nowruz celebration featuring traditional food and music. Nowruz, the Persian New Year, is celebrated by many Central Asian cultures and marks the beginning of spring.',
-    //     image: '/events/celebrations.jpeg',
-    // },
+    {
+        id: 1,
+        title: 'Welcome Back Event',
+        date: 'August 23, 2025',
+        time: '6:00 PM - 9:00 PM',
+        location: 'Tech Green, Georgia Tech Campus',
+        description:
+            'Join us for our annual Welcome Back event to kick off the new academic year! Enjoy food, games, and meet fellow members of the Central Asian Student Association.',
+        image: '/events/welcome-back.png',
+    },
 ];
 
 export interface Country {

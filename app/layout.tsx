@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     description:
         'Official website of the Central Asian Student Association at Georgia Tech',
     icons: {
-        icon: '/icon.png',
-        shortcut: '/icon.png',
-        apple: '/icon.png',
+        icon: '/logo-buzz.JPG',
+        shortcut: '/logo-buzz.JPG',
+        apple: '/logo-buzz.JPG',
     },
     keywords: [
         'Central Asian Student Association',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         description: 'Connect with the Central Asian community at Georgia Tech',
         images: [
             {
-                url: '/icon.png',
+                url: '/logo-buzz.JPG',
                 width: 1200,
                 height: 630,
                 alt: 'CASA GT Logo',
