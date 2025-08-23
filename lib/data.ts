@@ -123,13 +123,13 @@ export interface Event {
 export const events: Event[] = [
     {
         id: 1,
-        title: 'Welcome Back Event',
-        date: 'August 23, 2025',
-        time: '6:00 PM - 9:00 PM',
-        location: 'Tech Green, Georgia Tech Campus',
+        title: 'Welcome Back Night',
+        date: 'Saturday, August 23, 2025',
+        time: '6:30 PM',
+        location: 'Society Atlanta, 811 Peachtree St. NE, Midtown Atlanta',
         description:
             'Join us for our annual Welcome Back event to kick off the new academic year! Enjoy food, games, and meet fellow members of the Central Asian Student Association.',
-        image: '/events/welcome-back.png',
+        image: '/events/welcome-back.jpg',
     },
 ];
 
