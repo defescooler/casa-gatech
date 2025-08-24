@@ -4,7 +4,13 @@ import { ArrowRight, Calendar, Mail, MapPin, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
 
-import { flagsMetaData, leadershipTeam, photoAlbum, events } from '@/lib/data';
+import {
+    flagsMetaData,
+    leadershipTeam,
+    photoAlbum,
+    events,
+    pastEvents,
+} from '@/lib/data';
 import { getLastCommitDate } from '@/lib/git-info';
 
 import { NewsletterDialog } from '@/components/newsletter-dialog';
@@ -16,7 +22,11 @@ export default function Home() {
                 <div className='container flex h-16 items-center justify-between'>
                     <div className='flex items-center gap-2'>
                         <Link href='/' className='flex items-center gap-2'>
-                            <div className='h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-amber-600'></div>
+                            <img
+                                src='/logo-buzz.JPG'
+                                alt='CASA GT Logo'
+                                className='h-8 w-8 rounded-full object-cover'
+                            />
                             <span className='text-lg font-semibold tracking-tight'>
                                 CASA GT
                             </span>
@@ -25,16 +35,10 @@ export default function Home() {
                     <nav className='hidden md:flex md:gap-6'>
                         <div className='flex items-center gap-4'>
                             <Link
-                                href='#about'
+                                href='#events'
                                 className='relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary'
                             >
-                                About
-                            </Link>
-                            <Link
-                                href='#countries'
-                                className='relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary'
-                            >
-                                Countries
+                                Events
                             </Link>
                             <Link
                                 href='#gallery'
@@ -47,6 +51,12 @@ export default function Home() {
                                 className='relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary'
                             >
                                 Leadership
+                            </Link>
+                            <Link
+                                href='#resources'
+                                className='relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary'
+                            >
+                                Resources
                             </Link>
                             <Link
                                 href='#contact'
@@ -63,7 +73,7 @@ export default function Home() {
                                 href='/events'
                                 className='rounded-md bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800 transition-colors hover:bg-amber-100'
                             >
-                                Events
+                                All Events
                             </Link>
                             <Link
                                 href='/explore'
@@ -74,7 +84,10 @@ export default function Home() {
                         </div>
                     </nav>
                     <div className='flex items-center gap-4'>
-                        <Link href='#contact' className='hidden md:inline-flex'>
+                        <Link
+                            href='https://forms.gle/QonzqQiQHAEsBAWt5'
+                            className='hidden md:inline-flex'
+                        >
                             <Button size='sm'>Join Us</Button>
                         </Link>
                         <MobileNav />
@@ -258,6 +271,65 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+                <section
+                    id='past-events'
+                    className='bg-slate-50 py-12 md:py-16'
+                >
+                    <div className='container'>
+                        <div className='flex flex-col justify-between gap-4 sm:flex-row sm:items-center'>
+                            <div>
+                                <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
+                                    Past Events
+                                </h2>
+                                <p className='mt-2 text-muted-foreground'>
+                                    Look back at our memorable events and
+                                    celebrations
+                                </p>
+                            </div>
+                            <Link href='/past-events'>
+                                <Button variant='outline'>
+                                    View All Past Events
+                                    <ArrowRight className='ml-2 h-4 w-4' />
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className='mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
+                            {pastEvents.slice(0, 4).map((event) => (
+                                <div
+                                    key={event.id}
+                                    className='group rounded-lg border bg-background p-4 shadow-sm transition-all hover:shadow'
+                                >
+                                    <div className='aspect-video w-full overflow-hidden rounded-lg'>
+                                        <img
+                                            src={
+                                                event.image ||
+                                                '/placeholder.svg'
+                                            }
+                                            alt={event.title}
+                                            className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
+                                        />
+                                    </div>
+                                    <div className='mt-4'>
+                                        <div className='flex items-center gap-2 text-amber-600'>
+                                            <Calendar className='h-4 w-4' />
+                                            <span className='text-xs font-medium'>
+                                                {event.date}
+                                            </span>
+                                        </div>
+                                        <h3 className='mt-2 text-lg font-semibold'>
+                                            {event.title}
+                                        </h3>
+                                        <p className='mt-1 text-sm text-muted-foreground'>
+                                            {event.description.length > 80
+                                                ? `${event.description.substring(0, 80)}...`
+                                                : event.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
                 <section id='gallery' className='container py-12 md:py-16'>
                     <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
                         Photo Gallery
@@ -345,7 +417,7 @@ export default function Home() {
                                 Central Asia, from nomadic folk songs to
                                 classical maqam.
                             </p>
-                            <Link href='/explore'>
+                            <Link href='/music'>
                                 <Button
                                     variant='link'
                                     className='mt-4 h-8 transform-none p-0'
@@ -363,7 +435,7 @@ export default function Home() {
                                 Learn about Central Asian culinary traditions
                                 and try authentic recipes from the region.
                             </p>
-                            <Link href='/explore'>
+                            <Link href='/recipes'>
                                 <Button
                                     variant='link'
                                     className='mt-4 h-8 transform-none p-0'
@@ -382,7 +454,7 @@ export default function Home() {
                                 including Kazakh, Uzbek, Kyrgyz, Tajik, and
                                 Turkmen.
                             </p>
-                            <Link href='/explore'>
+                            <Link href='/languages'>
                                 <Button
                                     variant='link'
                                     className='mt-4 h-8 transform-none p-0'
@@ -580,7 +652,11 @@ export default function Home() {
             <footer className='border-t py-6 md:py-8'>
                 <div className='container flex flex-col items-center justify-between gap-4 md:flex-row'>
                     <div className='flex items-center gap-2'>
-                        <div className='h-6 w-6 rounded-full bg-gradient-to-br from-amber-400 to-amber-600'></div>
+                        <img
+                            src='/logo-buzz.JPG'
+                            alt='CASA GT Logo'
+                            className='h-6 w-6 rounded-full object-cover'
+                        />
                         <span className='text-sm font-semibold'>CASA GT</span>
                     </div>
                     <div className='flex flex-col items-center md:items-start'>
