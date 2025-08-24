@@ -95,7 +95,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className='flex flex-col gap-2 min-[400px]:flex-row'>
-                            <Link href='/join'>
+                            <Link href='https://forms.gle/RLgGMUnpbjdoL9BK6'>
                                 <Button size='lg'>
                                     Join Our Community
                                     <ArrowRight className='ml-2 h-4 w-4' />
