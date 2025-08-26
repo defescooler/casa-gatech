@@ -37,6 +37,12 @@ export const flagsMetaData: FlagMetaData[] = [
         description:
             'Famous for its ancient Silk Road ruins, unique traditions, and natural gas reserves.',
     },
+    {
+        name: 'Azerbaijan',
+        flag: '/flags/az-flag.png',
+        description:
+            'Known as the Land of Fire, famous for its oil reserves, ancient fire temples, and rich cultural heritage bridging Europe and Asia.',
+    },
 ];
 
 export interface LeadershipMember {
@@ -337,6 +343,43 @@ export const recipes: Recipe[] = [
         image: '/recipes/non.jpeg',
         difficulty: 'Medium',
     },
+    {
+        id: 6,
+        name: 'Azerbaijani Dolma',
+        country: 'Azerbaijan',
+        description:
+            'Traditional stuffed grape leaves with rice, herbs, and meat. A beloved dish served at celebrations and family gatherings.',
+        ingredients: [
+            '1 jar grape leaves (or 30 fresh leaves)',
+            '1 lb ground lamb or beef',
+            '1 cup basmati rice',
+            '1 large onion, finely chopped',
+            '1/2 cup fresh dill, chopped',
+            '1/2 cup fresh cilantro, chopped',
+            '1/4 cup fresh mint, chopped',
+            '2 tbsp tomato paste',
+            '1/4 cup olive oil',
+            '2 cups beef broth',
+            'Salt, pepper, cinnamon',
+            'Yogurt for serving',
+        ],
+        instructions: [
+            'If using jarred grape leaves, rinse and drain well',
+            'Mix ground meat, rice, onion, herbs, and spices',
+            'Place 1 tablespoon filling on each grape leaf',
+            'Roll tightly, folding in the sides',
+            'Layer dolmas in heavy pot, seam side down',
+            'Mix tomato paste with broth and pour over dolmas',
+            'Cover with plate to weigh down, then pot lid',
+            'Simmer gently for 45 minutes until rice is tender',
+            'Serve warm or at room temperature with yogurt',
+        ],
+        prepTime: '45 minutes',
+        cookTime: '45 minutes',
+        servings: 6,
+        image: '/recipes/dolma.jpeg',
+        difficulty: 'Medium',
+    },
 ];
 
 export interface LanguageResource {
@@ -430,6 +473,23 @@ export const languageResources: LanguageResource[] = [
             'The language has significant dialectal variation between different tribal groups',
         ],
     },
+    {
+        id: 6,
+        language: 'Azerbaijani',
+        country: 'Azerbaijan',
+        description:
+            'Azerbaijani is a Turkic language spoken by about 32 million people worldwide. It serves as the official language of Azerbaijan and is also spoken in Iran, Georgia, and Turkey.',
+        speakers: '32+ million worldwide',
+        writingSystem: 'Latin script (since 1991)',
+        interestingFacts: [
+            'Azerbaijani has two main varieties: North Azerbaijani (Azerbaijan) and South Azerbaijani (Iran)',
+            'The language switched from Arabic script to Latin (1929), then Cyrillic (1939), and back to Latin (1991)',
+            'Azerbaijani literature includes the famous epic "Koroglu" and works by classical poet Nizami Ganjavi',
+            'The language has significant Persian and Arabic influences due to historical connections',
+            'Azerbaijani is mutually intelligible with Turkish, though they have distinct differences',
+            'The word "Azerbaijan" comes from "Atropates," an ancient Persian satrap',
+        ],
+    },
 ];
 
 export interface MusicResource {
@@ -505,24 +565,22 @@ export const musicResources: MusicResource[] = [
         imageUrl: '/music/aitys.jpeg',
     },
     {
-        id: 7,
-        title: 'Dimash Kudaibergen',
-        country: 'Kazakhstan',
-        type: 'artist',
+        id: 9,
+        title: 'Tar',
+        country: 'Azerbaijan',
+        type: 'instrument',
         description:
-            'World-renowned Kazakh singer known for his extraordinary vocal range and modern interpretations of traditional music.',
-        videoUrl: 'https://youtube.com/watch?v=dimash-performance',
-        imageUrl: '/music/dimash-kudaibergen.jpeg',
+            'Traditional long-necked lute with double strings, central to Azerbaijani classical music and mugham performances.',
+        imageUrl: '/music/tar.jpeg',
     },
     {
-        id: 8,
-        title: 'Yulduz Usmonova',
-        country: 'Uzbekistan',
-        type: 'artist',
+        id: 10,
+        title: 'Mugham',
+        country: 'Azerbaijan',
+        type: 'genre',
         description:
-            'Celebrated Uzbek singer who has popularized traditional Uzbek music internationally.',
-        audioUrl: 'https://example.com/yulduz-song.mp3',
-        imageUrl: '/music/yulduz-usmonova.jpeg',
+            'UNESCO-recognized traditional musical form combining instrumental and vocal music, representing the soul of Azerbaijani culture.',
+        imageUrl: '/music/mugham.jpeg',
     },
 ];
 
@@ -539,6 +597,18 @@ export interface Country {
 }
 
 export const countries: Country[] = [
+    {
+        name: 'Azerbaijan',
+        capital: 'Baku',
+        position: [40.4093, 49.8671],
+        flag: '/flags/az-flag.png',
+        description:
+            'Known as the Land of Fire, famous for its oil reserves, ancient fire temples, and rich cultural heritage bridging Europe and Asia.',
+        population: '10.1 million',
+        area: '86,600 km²',
+        languages: ['Azerbaijani', 'Russian'],
+        currency: 'Manat (AZN)',
+    },
     {
         name: 'Kazakhstan',
         capital: 'Astana',

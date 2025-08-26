@@ -20,7 +20,7 @@ export default function ExplorePage() {
                 </h1>
                 <p className='mt-2 text-muted-foreground'>
                     Discover the rich cultural heritage, traditions, and modern
-                    life of Central Asian countries.
+                    life of Central Asian countries including Azerbaijan.
                 </p>
             </div>
 
@@ -49,11 +49,9 @@ export default function ExplorePage() {
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
                                     Central Asian cultures celebrate various
-                                    seasonal events, with Nowruz (Persian New
-                                    Year) being one of the most significant.
-                                    These celebrations often involve special
-                                    foods, music, dance, and community
-                                    gatherings.
+                                    seasonal festivals like Nauryz (New Year),
+                                    harvest celebrations, and religious holidays
+                                    with traditional music, dance, and food.
                                 </p>
                             </div>
                         </div>
@@ -61,7 +59,7 @@ export default function ExplorePage() {
                         <div className='overflow-hidden rounded-lg border'>
                             <img
                                 src='/explore/arts-and-crafts.png'
-                                alt='Traditional crafts'
+                                alt='Traditional arts and crafts'
                                 className='aspect-video w-full object-cover'
                             />
                             <div className='p-4'>
@@ -69,11 +67,10 @@ export default function ExplorePage() {
                                     Arts & Crafts
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Central Asia has a rich tradition of
-                                    handicrafts, including carpet weaving,
-                                    embroidery, ceramics, and metalwork. Each
-                                    region has its distinctive patterns and
-                                    techniques passed down through generations.
+                                    From Azerbaijani carpet weaving to Kyrgyz
+                                    felt making, Central Asian artisans create
+                                    beautiful handicrafts using techniques
+                                    passed down through generations.
                                 </p>
                             </div>
                         </div>
@@ -81,7 +78,7 @@ export default function ExplorePage() {
                         <div className='overflow-hidden rounded-lg border'>
                             <img
                                 src='/explore/music-and-dance.png'
-                                alt='Traditional music'
+                                alt='Traditional music and dance'
                                 className='aspect-video w-full object-cover'
                             />
                             <div className='p-4'>
@@ -89,11 +86,10 @@ export default function ExplorePage() {
                                     Music & Dance
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Traditional music in Central Asia features
-                                    unique instruments like the komuz, dombra,
-                                    and dutar. Folk dances often tell stories of
-                                    daily life, historical events, or natural
-                                    phenomena.
+                                    Traditional instruments like the Azerbaijani
+                                    tar, Kazakh dombra, and Kyrgyz komuz create
+                                    the soundtrack for epic tales and cultural
+                                    celebrations.
                                 </p>
                             </div>
                         </div>
@@ -106,15 +102,13 @@ export default function ExplorePage() {
                             />
                             <div className='p-4'>
                                 <h3 className='text-xl font-semibold'>
-                                    Cuisine
+                                    Culinary Heritage
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Central Asian cuisine reflects the
-                                    region&#39;s nomadic heritage and
-                                    agricultural practices. Popular dishes
-                                    include plov (rice pilaf), manti
-                                    (dumplings), lagman (noodles), and various
-                                    breads like non/lepeshka.
+                                    From Uzbek plov to Azerbaijani dolma,
+                                    Central Asian cuisine reflects the region's
+                                    position on the ancient Silk Road with
+                                    diverse flavors and techniques.
                                 </p>
                             </div>
                         </div>
@@ -134,12 +128,10 @@ export default function ExplorePage() {
                                     Urban Development
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Central Asian cities like Astana
-                                    (Kazakhstan), Tashkent (Uzbekistan), and
-                                    Ashgabat (Turkmenistan) have undergone
-                                    significant modernization with impressive
-                                    architecture, technology hubs, and cultural
-                                    centers.
+                                    Modern cities like Baku, Almaty, and
+                                    Tashkent blend traditional architecture with
+                                    contemporary design, creating unique urban
+                                    landscapes.
                                 </p>
                             </div>
                         </div>
@@ -147,7 +139,7 @@ export default function ExplorePage() {
                         <div className='overflow-hidden rounded-lg border'>
                             <img
                                 src='/explore/edu.png'
-                                alt='Education'
+                                alt='Education and technology'
                                 className='aspect-video w-full object-cover'
                             />
                             <div className='p-4'>
@@ -155,11 +147,10 @@ export default function ExplorePage() {
                                     Education & Innovation
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Central Asian countries place a strong
-                                    emphasis on education, with growing tech
-                                    sectors and startup ecosystems. Many
-                                    students from the region pursue
-                                    international education opportunities.
+                                    Central Asian countries are investing
+                                    heavily in education and technology, with
+                                    students studying abroad and bringing new
+                                    ideas back home.
                                 </p>
                             </div>
                         </div>
@@ -167,7 +158,7 @@ export default function ExplorePage() {
                         <div className='overflow-hidden rounded-lg border'>
                             <img
                                 src='/explore/contemp-arts.png'
-                                alt='Arts scene'
+                                alt='Contemporary arts'
                                 className='aspect-video w-full object-cover'
                             />
                             <div className='p-4'>
@@ -175,11 +166,10 @@ export default function ExplorePage() {
                                     Contemporary Arts
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    The contemporary arts scene in Central Asia
-                                    blends traditional influences with modern
-                                    expressions. Artists, filmmakers, and
-                                    musicians from the region are gaining
-                                    international recognition.
+                                    A new generation of artists is
+                                    reinterpreting traditional themes through
+                                    modern mediums, creating a vibrant
+                                    contemporary art scene.
                                 </p>
                             </div>
                         </div>
@@ -187,19 +177,17 @@ export default function ExplorePage() {
                         <div className='overflow-hidden rounded-lg border'>
                             <img
                                 src='/explore/tourism.png'
-                                alt='Tourism'
+                                alt='Tourism and preservation'
                                 className='aspect-video w-full object-cover'
                             />
                             <div className='p-4'>
                                 <h3 className='text-xl font-semibold'>
-                                    Tourism & Hospitality
+                                    Tourism & Preservation
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
-                                    Central Asia is emerging as a tourism
-                                    destination, offering experiences from
-                                    historical Silk Road cities to mountain
-                                    adventures, nomadic homestays, and cultural
-                                    festivals.
+                                    Countries are developing sustainable tourism
+                                    while preserving their cultural heritage and
+                                    natural landscapes for future generations.
                                 </p>
                             </div>
                         </div>

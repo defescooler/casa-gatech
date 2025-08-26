@@ -162,7 +162,7 @@ export default function Home() {
                             diverse Central Asian nations, each with their
                             unique culture, history, and traditions.
                         </p>
-                        <div className='mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+                        <div className='mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
                             {flagsMetaData.map((country, index) => (
                                 <div
                                     key={index}
