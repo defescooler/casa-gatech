@@ -126,7 +126,18 @@ export interface Event {
     image: string;
 }
 
-export const events: Event[] = [];
+export const events: Event[] = [
+    {
+        id: 1,
+        title: 'Trivia Night',
+        date: 'Saturday, September 27, 2025',
+        time: '6:30PM',
+        location: 'Sociery Midtown, 811 Peachtree St. NE, Atlanta, GA 30308',
+        description:
+            'Join us for an exciting evening of trivia and fun! Test your knowledge on a variety of topics while enjoying food and drinks with fellow members of the Central Asian Student Association. Form a team or come solo and make new friends!',
+        image: '/events/trivia-night.jpeg',
+    },
+];
 
 export const pastEvents: Event[] = [
     {

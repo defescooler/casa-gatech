@@ -68,7 +68,9 @@ export default function EventsPage() {
                             </CardContent>
                             <CardFooter className='mt-auto'>
                                 <Button variant='outline' className='w-full'>
-                                    RSVP for this Event
+                                    <Link href='https://gatech.campuslabs.com/engage/event/11556010'>
+                                        RSVP for this Event
+                                    </Link>
                                 </Button>
                             </CardFooter>
                         </Card>
