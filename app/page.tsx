@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Calendar, Mail, MapPin, Users } from 'lucide-react';
+import { ArrowRight, Calendar, Mail, MapPin } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
@@ -11,9 +11,6 @@ import {
     events,
     pastEvents,
 } from '@/lib/data';
-import { getLastCommitDate } from '@/lib/git-info';
-
-import { NewsletterDialog } from '@/components/newsletter-dialog';
 
 export default function Home() {
     return (
@@ -53,10 +50,10 @@ export default function Home() {
                                 Leadership
                             </Link>
                             <Link
-                                href='#resources'
+                                href='#about'
                                 className='relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary'
                             >
-                                Resources
+                                About
                             </Link>
                             <Link
                                 href='#contact'
@@ -71,13 +68,13 @@ export default function Home() {
                         <div className='flex items-center gap-4'>
                             <Link
                                 href='/events'
-                                className='rounded-md bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800 transition-colors hover:bg-amber-100'
+                                className='rounded-md bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/15'
                             >
                                 All Events
                             </Link>
                             <Link
                                 href='/explore'
-                                className='rounded-md bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800 transition-colors hover:bg-amber-100'
+                                className='rounded-md bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/15'
                             >
                                 Explore
                             </Link>
@@ -95,64 +92,65 @@ export default function Home() {
                 </div>
             </header>
             <main className='flex-1'>
-                <section className='relative'>
-                    <div className='absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100 opacity-50' />
-                    <div className='container relative flex flex-col items-center justify-center gap-4 py-24 md:py-32'>
-                        <div className='space-y-3 text-center'>
-                            <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-                                Central Asian Student Association
+                <section className='relative overflow-hidden'>
+                    <div className='pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background' />
+                    <div className='container relative grid grid-cols-1 items-center gap-12 py-16 md:grid-cols-2 md:items-start md:gap-16 md:py-24'>
+                        <div className='min-w-0 space-y-6 text-center md:text-left'>
+                            <h1 className='text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl'>
+                                Central Asian Student Association @ Georgia Tech
                             </h1>
-                            <p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-                                Celebrating the rich cultural heritage of
-                                Central Asia at Georgia Tech
+                            <p className='mx-auto max-w-[520px] text-base leading-relaxed text-muted-foreground sm:text-lg md:mx-0'>
+                                We bring together the Central Asian community at
+                                Georgia Tech to keep our culture alive (and our
+                                stomachs full). No stress, no pretension—just a
+                                group of friends celebrating Nauryz, Unity Day,
+                                and everything in between.
                             </p>
+                            <div className='flex flex-col justify-center gap-3 min-[400px]:flex-row md:justify-start'>
+                                <Link href='https://gatech.campuslabs.com/engage/organization/central-asian-student-association'>
+                                    <Button
+                                        size='lg'
+                                        className='bg-primary text-primary-foreground hover:bg-primary/90'
+                                    >
+                                        Join Our Community
+                                        <ArrowRight className='ml-2 h-4 w-4' />
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
-                        <div className='flex flex-col gap-2 min-[400px]:flex-row'>
-                            <Link href='https://forms.gle/RLgGMUnpbjdoL9BK6'>
-                                <Button size='lg'>
-                                    Join Our Community
-                                    <ArrowRight className='ml-2 h-4 w-4' />
-                                </Button>
-                            </Link>
-                            <Link href='/explore'>
-                                <Button variant='outline' size='lg'>
-                                    Learn More
-                                </Button>
-                            </Link>
-                        </div>
-                    </div>
-                </section>
-                <section id='about' className='container py-12 md:py-16'>
-                    <div className='grid gap-6 md:grid-cols-2 md:gap-12'>
-                        <div>
-                            <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-                                About Us
-                            </h2>
-                            <p className='mt-4 text-muted-foreground'>
-                                The Central Asian Student Association at Georgia
-                                Tech is dedicated to promoting awareness and
-                                appreciation of Central Asian cultures,
-                                traditions, and heritage within the Georgia Tech
-                                community.
-                            </p>
-                            <p className='mt-4 text-muted-foreground'>
-                                Our mission is to create a supportive community
-                                for Central Asian students while sharing our
-                                rich cultural heritage with the broader campus.
-                            </p>
-                        </div>
-                        <div className='flex items-center justify-center'>
-                            <div className='overflow-hidden rounded-lg'>
+                        <div className='order-first flex min-w-0 justify-center md:order-last md:justify-end'>
+                            <div className='w-full max-w-[640px] overflow-hidden rounded-2xl bg-background shadow-sm'>
                                 <img
-                                    src='/photo-album/nauryz-photo.jpeg'
-                                    alt='Central Asian cultural celebration'
-                                    className='aspect-video h-full w-full object-cover'
+                                    src='/photo-album/nauryz-photo.png'
+                                    alt='CASA GT members celebrating Nauryz'
+                                    className='aspect-[4/3] h-full w-full object-cover'
                                 />
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id='countries' className='bg-slate-50 py-12 md:py-16'>
+                <section id='about' className='container py-12 md:py-16'>
+                    <div className='mx-auto max-w-3xl'>
+                        <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
+                            About Us
+                        </h2>
+                        <p className='mt-4 text-muted-foreground'>
+                            The Central Asian Student Association at Georgia
+                            Tech is dedicated to promoting awareness and
+                            appreciation of Central Asian cultures, traditions,
+                            and heritage within the Georgia Tech community.
+                        </p>
+                        <p className='mt-4 text-muted-foreground'>
+                            Our mission is to create a supportive community for
+                            Central Asian students while sharing our rich
+                            cultural heritage with the broader campus.
+                        </p>
+                    </div>
+                </section>
+                <section
+                    id='countries'
+                    className='border-t bg-background py-12 md:py-16'
+                >
                     <div className='container'>
                         <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
                             Central Asian Countries
@@ -224,7 +222,7 @@ export default function Home() {
                                             key={event.id}
                                             className='group rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow'
                                         >
-                                            <div className='flex items-center gap-2 text-amber-600'>
+                                            <div className='flex items-center gap-2 text-primary'>
                                                 <Calendar className='h-5 w-5' />
                                                 <span className='text-sm font-medium'>
                                                     {event.date}
@@ -242,21 +240,12 @@ export default function Home() {
                                                 <MapPin className='h-4 w-4' />
                                                 <span>{event.location}</span>
                                             </div>
-                                            <Link href='/events'>
-                                                <Button
-                                                    variant='link'
-                                                    className='mt-4 h-8 p-0'
-                                                >
-                                                    Learn more
-                                                    <ArrowRight className='ml-1 h-4 w-4' />
-                                                </Button>
-                                            </Link>
                                         </div>
                                     ))}
                                 </div>
                             ) : (
                                 <div className='flex flex-col items-center justify-center rounded-lg border bg-background p-8 text-center'>
-                                    <Calendar className='h-12 w-12 text-amber-600 opacity-70' />
+                                    <Calendar className='h-12 w-12 text-primary opacity-70' />
                                     <h3 className='mt-4 text-xl font-semibold'>
                                         No Upcoming Events
                                     </h3>
@@ -273,7 +262,7 @@ export default function Home() {
                 </section>
                 <section
                     id='past-events'
-                    className='bg-slate-50 py-12 md:py-16'
+                    className='border-t bg-background py-12 md:py-16'
                 >
                     <div className='container'>
                         <div className='flex flex-col justify-between gap-4 sm:flex-row sm:items-center'>
@@ -310,7 +299,7 @@ export default function Home() {
                                         />
                                     </div>
                                     <div className='mt-4'>
-                                        <div className='flex items-center gap-2 text-amber-600'>
+                                        <div className='flex items-center gap-2 text-primary'>
                                             <Calendar className='h-4 w-4' />
                                             <span className='text-xs font-medium'>
                                                 {event.date}
@@ -363,7 +352,7 @@ export default function Home() {
                     <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
                         Our Leadership
                     </h2>
-                    <div className='mt-8 grid justify-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
+                    <div className='mt-8 grid grid-cols-2 justify-center gap-8 md:grid-cols-4'>
                         {leadershipTeam.map((member, index) => (
                             <div
                                 key={index}
@@ -389,157 +378,10 @@ export default function Home() {
                         ))}
                     </div>
                 </section>
-                <section id='resources' className='container py-12 md:py-16'>
-                    <div className='flex flex-col justify-between gap-4 sm:flex-row sm:items-center'>
-                        <div>
-                            <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-                                Cultural Resources
-                            </h2>
-                            <p className='mt-2 max-w-3xl text-muted-foreground'>
-                                Explore the rich cultural heritage of Central
-                                Asia through these resources.
-                            </p>
-                        </div>
-                        <Link href='/explore'>
-                            <Button>
-                                Explore More
-                                <ArrowRight className='ml-2 h-4 w-4' />
-                            </Button>
-                        </Link>
-                    </div>
-                    <div className='mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-                        <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                            <h3 className='text-xl font-semibold'>
-                                Traditional Music
-                            </h3>
-                            <p className='mt-2 text-sm text-muted-foreground'>
-                                Discover the diverse musical traditions of
-                                Central Asia, from nomadic folk songs to
-                                classical maqam.
-                            </p>
-                            <Link href='/music'>
-                                <Button
-                                    variant='link'
-                                    className='mt-4 h-8 transform-none p-0'
-                                >
-                                    Explore Music
-                                    <ArrowRight className='ml-1 h-4 w-4' />
-                                </Button>
-                            </Link>
-                        </div>
-                        <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                            <h3 className='text-xl font-semibold'>
-                                Cuisine & Recipes
-                            </h3>
-                            <p className='mt-2 text-sm text-muted-foreground'>
-                                Learn about Central Asian culinary traditions
-                                and try authentic recipes from the region.
-                            </p>
-                            <Link href='/recipes'>
-                                <Button
-                                    variant='link'
-                                    className='mt-4 h-8 transform-none p-0'
-                                >
-                                    Explore Cuisine
-                                    <ArrowRight className='ml-1 h-4 w-4' />
-                                </Button>
-                            </Link>
-                        </div>
-                        <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                            <h3 className='text-xl font-semibold'>
-                                Language Resources
-                            </h3>
-                            <p className='mt-2 text-sm text-muted-foreground'>
-                                Resources for learning Central Asian languages,
-                                including Kazakh, Uzbek, Kyrgyz, Tajik, and
-                                Turkmen.
-                            </p>
-                            <Link href='/languages'>
-                                <Button
-                                    variant='link'
-                                    className='mt-4 h-8 transform-none p-0'
-                                >
-                                    Explore Languages
-                                    <ArrowRight className='ml-1 h-4 w-4' />
-                                </Button>
-                            </Link>
-                        </div>
-                    </div>
-                </section>
                 <section
-                    id='testimonials'
-                    className='bg-slate-50 py-12 md:py-16'
+                    id='contact'
+                    className='border-t bg-background py-12 md:py-16'
                 >
-                    <div className='container'>
-                        <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-                            Student Testimonials
-                        </h2>
-                        <p className='mt-2 max-w-3xl text-muted-foreground'>
-                            Hear from our members about their experiences with
-                            CASA GT.
-                        </p>
-                        <div className='mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2'>
-                            <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                                <div className='flex items-center gap-4'>
-                                    <div className='h-12 w-12 overflow-hidden rounded-full'>
-                                        <img
-                                            src='/testimonials/aldinash.jpeg'
-                                            alt='Student'
-                                            className='h-full w-full object-cover'
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='font-semibold'>
-                                            Aldinash Seitenov
-                                        </h3>
-                                        <p className='text-sm text-muted-foreground'>
-                                            CS + Math, Class of 2027
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className='mt-4 text-sm text-muted-foreground'>
-                                    &#34;CASA has been my home away from home at
-                                    Georgia Tech. It&#39;s where I&#39;ve made
-                                    lifelong friends and stayed connected to my
-                                    culture.&#34;
-                                </p>
-                            </div>
-                            <div className='rounded-lg border bg-background p-6 shadow-sm'>
-                                <div className='flex items-center gap-4'>
-                                    <div className='h-12 w-12 overflow-hidden rounded-full'>
-                                        <img
-                                            src='/testimonials/erkosh.jpeg'
-                                            alt='Student'
-                                            className='h-full w-full object-cover'
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='font-semibold'>
-                                            Erkosh Paksushi
-                                        </h3>
-                                        <p className='text-sm text-muted-foreground'>
-                                            Food Management, Class of 667
-                                        </p>
-                                    </div>
-                                </div>
-                                <p className='mt-4 text-sm text-muted-foreground'>
-                                    As the official sushi and pizza provider of
-                                    CASA (they just don&#39;t know it yet), I
-                                    take a great pride in crafting our famously
-                                    Shymkent-Tastak fusion cuisine. Some say our
-                                    sushi defy the laws of texture, and our
-                                    so-called &#34;TV&#34; sushi has changed
-                                    lives. I personally support every student
-                                    who’s ever eaten our food and still managed
-                                    to pass finals. True resilience! GT
-                                    students, you inspire me every day to
-                                    continue doing the bare minimum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id='contact' className='bg-slate-50 py-12 md:py-16'>
                     <div className='container'>
                         <div className='mx-auto max-w-md text-center'>
                             <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
@@ -549,101 +391,105 @@ export default function Home() {
                                 Have questions or want to join our association?
                                 Reach out to us through any of these channels.
                             </p>
-                            <div className='mt-6 flex flex-col gap-4'>
+                            <div className='mt-6 flex flex-col gap-3'>
                                 <div className='flex items-center justify-center gap-2'>
-                                    <Mail className='h-5 w-5 text-amber-600' />
+                                    <Mail className='h-5 w-5 text-primary' />
+                                    <Link
+                                        href='mailto:akozhabek3@gatech.edu'
+                                        className='hover:underline'
+                                    >
+                                        akozhabek3@gatech.edu
+                                    </Link>
+                                </div>
+                                <div className='flex items-center justify-center gap-2'>
+                                    <Mail className='h-5 w-5 text-primary' />
                                     <Link
                                         href='mailto:adoss35@gatech.edu'
                                         className='hover:underline'
                                     >
-                                        adoss35 [at] gatech [dot] edu
+                                        adoss35@gatech.edu
                                     </Link>
                                 </div>
-                                <div className='flex items-center justify-center gap-2'>
-                                    <Users className='h-5 w-5 text-amber-600' />
-                                    <span>Weekly Meetings: TBD</span>
-                                </div>
                             </div>
-                            <div className='mt-8 flex justify-center gap-4'>
-                                <NewsletterDialog />
-
-                                <Button
-                                    variant='outline'
-                                    size='icon'
-                                    className='rounded-full'
+                            <div className='mt-6'>
+                                <Link
+                                    href='https://gatech.campuslabs.com/engage/organization/central-asian-student-association'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='24'
-                                        height='24'
-                                        viewBox='0 0 24 24'
-                                        fill='none'
-                                        stroke='currentColor'
-                                        strokeWidth='2'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        className='h-5 w-5'
-                                    >
-                                        <path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' />
-                                    </svg>
-                                    <span className='sr-only'>Facebook</span>
-                                </Button>
-                                <Button
-                                    variant='outline'
-                                    size='icon'
-                                    className='rounded-full'
+                                    <Button className='bg-primary text-primary-foreground hover:bg-primary/90'>
+                                        Become a Member on Engage
+                                        <ArrowRight className='ml-2 h-4 w-4' />
+                                    </Button>
+                                </Link>
+                            </div>
+                            <div className='mt-6 flex justify-center gap-4'>
+                                <Link
+                                    href='https://www.instagram.com/casa_gatech/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='24'
-                                        height='24'
-                                        viewBox='0 0 24 24'
-                                        fill='none'
-                                        stroke='currentColor'
-                                        strokeWidth='2'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        className='h-5 w-5'
+                                    <Button
+                                        variant='outline'
+                                        size='icon'
+                                        className='rounded-full'
                                     >
-                                        <rect
-                                            width='20'
-                                            height='20'
-                                            x='2'
-                                            y='2'
-                                            rx='5'
-                                            ry='5'
-                                        />
-                                        <path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' />
-                                        <line
-                                            x1='17.5'
-                                            x2='17.51'
-                                            y1='6.5'
-                                            y2='6.5'
-                                        />
-                                    </svg>
-                                    <span className='sr-only'>Instagram</span>
-                                </Button>
-                                <Button
-                                    variant='outline'
-                                    size='icon'
-                                    className='rounded-full'
+                                        <svg
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='24'
+                                            height='24'
+                                            viewBox='0 0 24 24'
+                                            fill='none'
+                                            stroke='currentColor'
+                                            strokeWidth='2'
+                                            strokeLinecap='round'
+                                            strokeLinejoin='round'
+                                            className='h-5 w-5'
+                                        >
+                                            <rect
+                                                width='20'
+                                                height='20'
+                                                x='2'
+                                                y='2'
+                                                rx='5'
+                                                ry='5'
+                                            />
+                                            <path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' />
+                                            <line
+                                                x1='17.5'
+                                                x2='17.51'
+                                                y1='6.5'
+                                                y2='6.5'
+                                            />
+                                        </svg>
+                                        <span className='sr-only'>
+                                            Instagram
+                                        </span>
+                                    </Button>
+                                </Link>
+                                <Link
+                                    href='https://t.me/+Pz7CoUDCV_YxMTMy'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='24'
-                                        height='24'
-                                        viewBox='0 0 24 24'
-                                        fill='none'
-                                        stroke='currentColor'
-                                        strokeWidth='2'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                        className='h-5 w-5'
+                                    <Button
+                                        variant='outline'
+                                        size='icon'
+                                        className='rounded-full'
                                     >
-                                        <path d='M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z' />
-                                    </svg>
-                                    <span className='sr-only'>Twitter</span>
-                                </Button>
+                                        <svg
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='24'
+                                            height='24'
+                                            viewBox='0 0 24 24'
+                                            fill='currentColor'
+                                            className='h-5 w-5'
+                                        >
+                                            <path d='M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z' />
+                                        </svg>
+                                        <span className='sr-only'>Telegram</span>
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -665,7 +511,7 @@ export default function Home() {
                             Tech. All rights reserved.
                         </p>
                         <p className='text-center text-xs text-muted-foreground md:text-left'>
-                            Last updated: {getLastCommitDate()}
+                            Last updated: Feb 28, 2026
                         </p>
                     </div>
                     <div className='flex gap-4'>

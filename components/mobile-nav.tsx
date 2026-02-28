@@ -36,7 +36,7 @@ export function MobileNav() {
             <SheetContent side='right' className='w-[300px] sm:w-[400px]'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-2'>
-                        <div className='h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-amber-600'></div>
+                        <div className='h-8 w-8 rounded-full bg-gradient-to-br from-primary/60 to-primary'></div>
                         <span className='text-lg font-semibold tracking-tight'>
                             CASA GT
                         </span>

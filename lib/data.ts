@@ -54,16 +54,10 @@ export interface LeadershipMember {
 
 export const leadershipTeam: LeadershipMember[] = [
     {
-        name: 'Iskander Dyussenov',
+        name: 'Arsen Kozhabek',
         role: 'President',
         country: 'Kazakhstan',
-        src: '/leadership-photos/iskander.jpeg',
-    },
-    {
-        name: 'Alikhan Uzak',
-        role: 'Vice President',
-        country: 'Kazakhstan',
-        src: '/leadership-photos/alikhan.jpeg',
+        src: '/leadership-photos/arsen.jpeg',
     },
     {
         name: 'Aksana Doss',
@@ -72,10 +66,10 @@ export const leadershipTeam: LeadershipMember[] = [
         src: '/leadership-photos/aksana.jpeg',
     },
     {
-        name: 'Daniil Tatarinov',
-        role: 'Head of IT',
-        country: 'Kazakhstan',
-        src: '/leadership-photos/daniil.jpeg',
+        name: 'Laman Vakilova',
+        role: 'Head of Design',
+        country: 'Azerbaijan',
+        src: '/leadership-photos/laman.jpg',
     },
     {
         name: 'Aselia Urmanbetova',
@@ -83,24 +77,12 @@ export const leadershipTeam: LeadershipMember[] = [
         country: 'Kyrgyzstan',
         src: '/leadership-photos/aselia.jpeg',
     },
-    {
-        name: 'Laman Vakilova',
-        role: 'Head of PR',
-        country: 'Azerbaijan',
-        src: '/leadership-photos/laman.jpg',
-    },
-    {
-        name: 'Arsen Kozhabek',
-        role: 'Elbasy',
-        country: 'Kazakhstan',
-        src: '/leadership-photos/arsen.jpeg',
-    },
 ];
 
 export const photoAlbum = [
     {
-        src: '/photo-album/nauryz-photo.jpeg',
-        alt: 'Nauryz Celebration',
+        src: '/photo-album/2026-02-28 00.46.56.jpg',
+        alt: 'CASA GT Event',
     },
     {
         src: '/photo-album/IMG_5804.png',
@@ -129,45 +111,85 @@ export interface Event {
 export const events: Event[] = [
     {
         id: 1,
-        title: 'Trivia Night',
-        date: 'Saturday, September 27, 2025',
-        time: '6:30PM',
-        location: 'Society Midtown, 811 Peachtree St. NE, Atlanta, GA 30308',
+        title: "International Women's Day",
+        date: 'Sunday, March 8, 2026',
+        time: '6:00 PM',
+        location: 'TBD',
         description:
-            'Join us for an exciting evening of trivia and fun! Test your knowledge on a variety of topics while enjoying food and drinks with fellow members of the Central Asian Student Association. Form a team or come solo and make new friends!',
-        image: '/events/trivia-night.jpeg',
+            'A cozy, "Chaykhana" style evening dedicated to the women of CASA and the broader GT community. The goal is a relaxed atmosphere where people can drop in between classes.',
+        image: '',
+    },
+    {
+        id: 2,
+        title: 'Nauryz',
+        date: 'March 30 or April 3, 2026 (TBD)',
+        time: '7:00 PM',
+        location: 'Hive Rooftop, Georgia Tech',
+        description:
+            'The flagship event of the semester — a celebration of the vernal equinox and the Central Asian New Year. Join us for food, music, and tradition.',
+        image: '',
+    },
+    {
+        id: 3,
+        title: 'Unity Day / Первомай',
+        date: 'Friday, May 1, 2026',
+        time: '6:00 PM',
+        location: 'Hive Rooftop, Georgia Tech',
+        description:
+            'A casual "final breath" before finals begin. Celebrating the diversity of the five "Stans" (plus neighbors) through shared snacks and relaxation.',
+        image: '',
     },
 ];
 
 export const pastEvents: Event[] = [
     {
         id: 101,
+        title: 'Plov Night',
+        date: 'Saturday, November 15, 2025',
+        time: '6:30 PM',
+        location: 'The Hive Rooftop, Georgia Tech',
+        description:
+            'A warm evening of authentic Central Asian cuisine featuring Lagman Express. Guests enjoyed plov, lagman, and great company on the rooftop of The Hive.',
+        image: '',
+    },
+    {
+        id: 102,
+        title: 'Trivia Night',
+        date: 'Saturday, September 27, 2025',
+        time: '6:30 PM',
+        location: 'Society Midtown, 811 Peachtree St. NE, Atlanta, GA 30308',
+        description:
+            'An exciting evening of trivia and fun! Members tested their knowledge on a variety of topics while enjoying food and drinks at Society Midtown.',
+        image: '/events/trivia-night.jpeg',
+    },
+    {
+        id: 103,
         title: 'Welcome Back Night',
         date: 'Saturday, August 23, 2025',
         time: '6:30 PM',
         location: 'Society Atlanta, 811 Peachtree St. NE, Midtown Atlanta',
         description:
-            'Join us for our annual Welcome Back event to kick off the new academic year! Enjoy food, games, and meet fellow members of the Central Asian Student Association.',
+            'Our annual Welcome Back event to kick off the new academic year — food, games, and great people from across Central Asia.',
         image: '/events/welcome-back.jpg',
     },
     {
-        id: 102,
+        id: 104,
         title: 'Nauryz Celebration 2024',
         date: 'Saturday, March 21, 2024',
         time: '5:00 PM',
         location: 'Student Center Ballroom, Georgia Tech',
         description:
             'We celebrated the traditional Central Asian New Year with authentic food, music, and cultural performances. Over 150 students joined us for this memorable evening.',
-        image: '/photo-album/nauryz-photo.jpeg',
+        image: '',
     },
     {
-        id: 103,
+        id: 105,
         title: 'CASA Golf Meeting',
         date: 'Sunday, April 14, 2024',
         time: '2:00 PM',
         location: 'Charlie Yates Golf Course',
         description:
-            'Our first annual golf tournament brought together students for a day of friendly competition and networking in a relaxed outdoor setting.',
+            'Our first annual golf outing brought together students for a day of friendly competition and networking in a relaxed outdoor setting.',
         image: '/photo-album/golf-photo.jpeg',
     },
 ];

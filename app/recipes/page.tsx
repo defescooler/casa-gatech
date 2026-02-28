@@ -16,7 +16,7 @@ export default function RecipesPage() {
             case 'Easy':
                 return 'bg-green-100 text-green-800';
             case 'Medium':
-                return 'bg-amber-100 text-amber-800';
+                return 'bg-green-100 text-green-800';
             case 'Hard':
                 return 'bg-red-100 text-red-800';
             default:
@@ -127,7 +127,7 @@ export default function RecipesPage() {
                                                             key={index}
                                                             className='flex'
                                                         >
-                                                            <span className='mr-3 font-medium text-amber-600'>
+                                                            <span className='mr-3 font-medium text-primary'>
                                                                 {index + 1}.
                                                             </span>
                                                             <span>

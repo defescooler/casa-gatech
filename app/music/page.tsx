@@ -34,7 +34,7 @@ export default function MusicPage() {
             case 'artist':
                 return 'bg-green-100 text-green-800';
             case 'song':
-                return 'bg-amber-100 text-amber-800';
+                return 'bg-green-100 text-green-800';
             default:
                 return 'bg-gray-100 text-gray-800';
         }
@@ -113,7 +113,7 @@ export default function MusicPage() {
             ))}
 
             <div className='mt-12 space-y-8'>
-                <Card className='bg-gradient-to-r from-amber-50 to-amber-100'>
+                <Card className='bg-primary/5'>
                     <CardHeader>
                         <CardTitle>Musical Traditions</CardTitle>
                     </CardHeader>

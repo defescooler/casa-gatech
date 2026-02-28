@@ -106,7 +106,7 @@ export default function ExplorePage() {
                                 </h3>
                                 <p className='mt-2 text-sm text-muted-foreground'>
                                     From Uzbek plov to Azerbaijani dolma,
-                                    Central Asian cuisine reflects the region's
+                                    Central Asian cuisine reflects the region&apos;s
                                     position on the ancient Silk Road with
                                     diverse flavors and techniques.
                                 </p>

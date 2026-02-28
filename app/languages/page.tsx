@@ -73,7 +73,7 @@ export default function LanguagesPage() {
                                     (fact, index) => (
                                         <div
                                             key={index}
-                                            className='rounded-lg border-l-4 border-amber-500 bg-amber-50 p-4'
+                                            className='rounded-lg border-l-4 border-primary bg-primary/5 p-4'
                                         >
                                             <p className='text-sm leading-relaxed text-gray-700'>
                                                 {fact}
@@ -86,7 +86,7 @@ export default function LanguagesPage() {
                     </Card>
                 ))}
             </div>
-            <div className='mt-12 rounded-lg bg-amber-50 p-6'>
+            <div className='mt-12 rounded-lg bg-primary/5 p-6'>
                 <h3 className='mb-2 text-lg font-semibold'>
                     About Central Asian Languages
                 </h3>

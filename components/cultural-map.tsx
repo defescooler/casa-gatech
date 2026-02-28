@@ -39,7 +39,7 @@ export default function CulturalMap() {
                                 : 'outline'
                         }
                         onClick={() => setSelectedCountry(country.id)}
-                        className='min-w-[120px]'
+                        className='min-w-[96px] sm:min-w-[120px]'
                     >
                         {country.name}
                     </Button>

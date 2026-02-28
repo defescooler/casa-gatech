@@ -46,7 +46,7 @@ export default function EventsPage() {
                                 />
                             </div>
                             <CardHeader>
-                                <div className='flex items-center gap-2 text-amber-600'>
+                                <div className='flex items-center gap-2 text-primary'>
                                     <Calendar className='h-5 w-5' />
                                     <span className='text-sm font-medium'>
                                         {event.date}
@@ -78,7 +78,7 @@ export default function EventsPage() {
                 </div>
             ) : (
                 <div className='flex flex-col items-center justify-center rounded-lg border bg-background p-12 text-center'>
-                    <Calendar className='h-16 w-16 text-amber-600 opacity-70' />
+                    <Calendar className='h-16 w-16 text-primary opacity-70' />
                     <h2 className='mt-6 text-2xl font-semibold'>
                         No Upcoming Events
                     </h2>
